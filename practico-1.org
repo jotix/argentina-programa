@@ -1,11 +1,20 @@
 * Ejercicio 2: 
 Ejecute el intérprete de Python luego:
 - 1. Describa en qué consiste.
+#+begin_example
+Es un repl (read eval print loop), lo que significa que es un ciclo de escribir una sentencia, 
+evaluarla e imprimir el resultado, hasta salir.
+#+end_example
 - 2. Pruebe distintas formas de salir del intérprete.
+#+begin_src python
+exit()
+#+end_src
 * Ejercicio 4: 
 Abra un editor de texto y copie el siguiente código:
+#+begin_src python
 import s y s
 print ( " Hola " , s y s . argv [ 0 ] )
+#+end_src
 Grabe el archivo con el nombre Ejercicio1.py. Luego ejecútelo como un
 módulo de Python.
 * Ejercicio 5: 
