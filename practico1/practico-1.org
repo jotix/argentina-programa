@@ -36,3 +36,94 @@ Usando el intérprete de Python calcule:
 del lado.
 - 4. El perímetro de un rectángulo. Seleccione ud. la longitud de los
 lados
+
+
+Ejercicio 2:
+
+Ejecute el intérprete de Python luego:
+
+    1. Describa en qué consiste.
+
+Es un repl (read eval print loop), lo que significa que es un ciclo de escribir una sentencia, evaluarla e imprimir el resultado, hasta salir.
+
+    2. Pruebe distintas formas de salir del intérprete.
+
+exit()
+quit()
+
+Ejercicio 4: 
+
+Abra un editor de texto y copie el siguiente código:
+import sys
+print ("Hola", sys.argv[0])
+
+Ejecucion:
+>> python ejercicio4.py 
+Hola ejercicio4.py
+
+Ejercicio 5:
+Cuando se desea ver los argumentos que se reciben como parámetros en un programa Python se debe:
+
+    1. Importar el módulo sys (import sys)
+
+    2. Imprimir la variable argv (print (sys.argv))
+
+Teniendo en cuenta esta información se pide verificar si Python se invoca:
+
+    1. Sin scripts y sin módulos la lista contiene el string vacío (‘’)
+
+>> python
+Python 3.11.3 (main, Apr  5 2023, 15:52:25) [GCC 12.2.1 20230201] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> print(sys.argv)
+['']
+>>> 
+
+    2. Con – la lista contiene -
+
+>> python -
+Python 3.11.3 (main, Apr  5 2023, 15:52:25) [GCC 12.2.1 20230201] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> import sys
+>>> print(sys.argv)
+['-']
+>>> 
+
+3. Con -c y un comando por ejemplo print(“Hola Mundo”) la lista
+contiene -c
+
+>> python -c 'import sys; print("Hola mundo", sys.argv)'
+Hola mundo ['-c']
+
+4. Con -m módulo la lista contiene el nombre del módulo completo.
+
+>> python -c 'import sys; print(sys.argv)' -m pip
+['-c', '-m', 'pip']
+
+Ejercicio 6:
+
+Usando el intérprete de Python calcule:
+
+    1. El área de un triángulo cuya base es 10cm y altura 20cm.
+
+    2. El área de un cuadrado cuyos lados miden 40cm.
+
+    3. El Perímetro de un triángulo equilátero. Seleccione ud. la longitud
+
+    del lado.
+
+    4. El perímetro de un rectángulo. Seleccione ud. la longitud de los lados
+
+>> python
+Python 3.11.3 (main, Apr  5 2023, 15:52:25) [GCC 12.2.1 20230201] on linux
+Type "help", "copyright", "credits" or "license" for more information.
+>>> 10*20/2
+100.0
+>>> 40*40
+1600
+>>> 12*3
+36
+>>> (12*2)+(24*2)
+72
+>>> 
