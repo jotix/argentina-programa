@@ -1,0 +1,29 @@
+* Ejercicio 2: 
+Ejecute el intérprete de Python luego:
+- 1. Describa en qué consiste.
+- 2. Pruebe distintas formas de salir del intérprete.
+* Ejercicio 4: 
+Abra un editor de texto y copie el siguiente código:
+import s y s
+print ( " Hola " , s y s . argv [ 0 ] )
+Grabe el archivo con el nombre Ejercicio1.py. Luego ejecútelo como un
+módulo de Python.
+* Ejercicio 5: 
+Cuando se desea ver los argumentos que se reciben como pa-
+rámetros en un programa Python se debe:
+- 1. Importar el módulo sys (import sys)
+- 2. Imprimir la variable argv (print (sys.argv))
+Teniendo en cuenta esta información se pide verificar si Python se in-
+voca:
+- 1. Sin scripts y sin módulos la lista contiene el string vacío (‘’)
+- 2. Con – la lista contiene -
+- 3. Con -c y un comando por ejemplo print(“Hola Mundo”) la lista contiene -c
+- 4. Con -m módulo la lista contiene el nombre del módulo completo.
+* Ejercicio 6: 
+Usando el intérprete de Python calcule:
+- 1. El área de un triángulo cuya base es 10cm y altura 20cm.
+- 2. El área de un cuadrado cuyos lados miden 40cm.
+- 3. El Perímetro de un triángulo equilátero. Seleccione ud. la longitud
+del lado.
+- 4. El perímetro de un rectángulo. Seleccione ud. la longitud de los
+lados
