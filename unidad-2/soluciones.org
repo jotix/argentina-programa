@@ -1,0 +1,229 @@
+* Ejercicio 1:
+
+Escriba un programa que permita que el usuario ingrese un
+número entero y luego lo imprima por pantalla
+
+#+begin_src python
+  numero_entero = int(input("ingrese un numero entero"))
+  print("El numero ingresado es:", numero_entero)
+#+end_src
+
+* Ejercicio 2:
+
+Escriba un programa que permita que el usuario ingrese un
+número flotante y luego lo imprima por pantalla.
+
+#+begin_src python
+  numero = float(input("ingrese un numero"))
+  print("El numero ingresado es:", numero)
+#+end_src
+
+* Ejercicio 3:
+
+Escriba un programa que permita que el usuario ingrese dos
+números e imprima por pantalla la suma, resta y multiplicación de
+dichos números.
+
+#+begin_src python
+  numero1 = input("Ingrese un numero:")
+  numero2 = input("Ingrese otro numero:")
+  print("La suma es:", numero1 + numero2)
+  print("La resta es:", numero1 - numero2)
+  print("la multiplicacion es", numero1 * numero2)
+#+end_src
+
+* ejercicio 4:
+
+Escriba un programa que permita calcular el área y perímetro
+de un triángulo.
+
+#+begin_src python
+  ### suponemos que es un triangulo equilatero
+  base = input("ingrese la base del triangulo:")
+  altura = input("Ingrese la altura del triangulo:")
+  print("El area del triangulo es:", base * altura / 2)
+  print("El perimetro del triangulo es:", base * 3)
+#+end_src
+
+* ejercicio 5:
+
+Escriba un programa que permita calcular el área y perímetro
+de un cuadrado.
+
+#+begin_src python
+  lado = input("Ingrese lado del cuadrado:")
+  print("El perimetro del cuadrado es:" lado * 4)
+  print("El area del cuadrado es:" lado ** 2)
+#+end_src
+
+* ejercicio 6:
+
+Escriba un programa que permita calcular el promedio de cinco
+números ingresados por el usuario
+
+#+begin_src python
+  numero1 = input("ingrese el numero 1:")
+  numero2 = input("ingrese el numero 2:")
+  numero3 = input("ingrese el numero 3:")
+  numero4 = input("ingrese el numero 4:")
+  numero5 = input("ingrese el numero 5:")
+  promedio = (numero1 + numero2 + numero3 + numero4 + numero5) / 5
+  print("El promedio de los numeros es:", promedio)
+#+end_src
+
+* ejercicio 7:
+
+Escriba un programa que imprima por pantalla “Hola Mundo!”
+
+#+begin_src python
+print("Hola Mundo!")
+#+end_src
+
+* ejercicio 8:
+
+Escriba un programa que solicite al usuario un string y luego
+imprima por pantalla dicho string.
+
+#+begin_src python
+string_ingresado = input("Ingrese un string:")
+print("El string ingresado es:", string_ingresado)
+#+end_src
+
+* ejercicio 9:
+
+Escriba un programa que permita almacenar un string en la
+variable s y luego muestre por pantalla el contenido de s.
+
+#+begin_src python
+  s = input("Ingrese un string:")
+  print("El string ingresado es:", s)
+#+end_src
+
+* ejercicio 10:
+
+Escriba un programa que permita que el usuario ingrese el
+nombre de una persona y luego imprima por pantalla “Hola:” seguido
+del nombre de la persona.
+
+#+begin_src python
+  nombre = imput("Ingrese el nombre:")
+  print("Hola:", nombre)
+#+end_src
+
+* ejercicio 11:
+
+Escriba un programa que permita ingresar por teclado el nom-
+bre de una persona, la cantidad de horas trabajadas y luego el costo de
+la hora. El programa debe informar cuánto debe cobrar la persona.
+
+#+begin_src python
+  nombre = input("Ingrese el nombre:")
+  horas_trabajadas = float(input("Horas trabajadas:"))
+  costo_hora = float(input("Costo de la hora:"))
+  print(nombre, "debe cobrar", horas_trabajadas * costo_hora)
+#+end_src
+
+* ejercicio 12:
+
+Escriba un programa que calcule el IMC (índice de Masa Cor-
+poral).
+
+#+begin_src python
+  # (IMC = peso (kg)/ [estatura (m)]2
+  peso = float(input("Ingrese el peso:"))
+  estatura = float(input("Ingrese la estatura (en metros):"))
+  imc = peso / (estatura ** 2)
+  print("el IMC de la persona es:", imc)
+#+end_src
+
+* ejercicio 13:
+
+Escriba un programa que pida al usuario dos números m y
+n el programa debe imprimir por pantalla el cociente y el resto de la
+división de m por n. Para este ejercicio asuma que n no puede ser 0.
+
+#+begin_src python
+
+  m = int(input("Ingrese el numero m:"))
+  n = int(input("Ingrese el numero m:"))
+
+  resto = m % n
+  cociente = m // n
+
+  print("El resto de la division de m pon es:", resto)
+  print("El cociente de la division de m por n es:", cociente)
+
+#+end_src
+
+* ejercicio 14:
+
+Escriba un programa que permita realizar la conversión a
+dólares y euros de una cantidad de pesos ingresada por el usuario.
+
+#+begin_src python
+
+  cotizacion_dolar = 100
+  cotizacion_euro = 120
+  monto_pesos = float(input("Ingrese el monto en pesos:"))
+
+  print("Equivalente en dolares:" round(monto_pesos / cotizacion_dolar, 2))
+  print("Equivalente en euros:" monto_pesos / cotizacion_euro)
+
+#+end_src
+
+* ejercicio 15:
+
+Escribir un programa que pregunte al usuario una cantidad a
+invertir, el interés anual y el número de años, y muestre por pantalla el
+capital obtenido en la inversión.
+
+#+begin_src python
+
+  cantidad_a_invertir = float(input("Ingrese la cantidad a invertir:"))
+  interes_anual = float(input("Ingrese el interes anual:"))
+  cantidad_de_anios = int(input("Ingrese los anios:"))
+
+  capital_obtenido = cantidad_a_invertir * ( (1 + (interes_anual/100)) ** cantidad_de_anios)
+
+  print("Capital obtenido:",  capital_obtenido)
+
+#+end_src
+
+* ejercicio 16:
+
+Una juguetería tiene mucho éxito en dos de sus productos:
+payasos y muñecas. Suele hacer venta por correo y la empresa de lo-
+gística les cobra por el peso de cada paquete así que deben calcular el
+peso de los payasos y muñecas que saldrán en cada paquete a demanda.
+Cada payaso pesa 112 g y cada muñeca 75 g. Escriba un programa que
+lea el número de payasos y muñecas vendidos en el último pedido y
+calcule el peso total del paquete que será enviado
+
+#+begin_src python
+
+#+end_src
+
+* ejercicio 17:
+
+Imagine que acaba de abrir una nueva cuenta de ahorros que
+ofrece el 4 % de interés al año. Estos ahorros debido a intereses, que no
+se cobran hasta finales de año, se añaden al balance final de su cuenta
+de ahorros. Escriba un programa que comience leyendo la cantidad de
+dinero depositada en la cuenta de ahorros, introducida por el usuario.
+Después el programa debe calcular y mostrar por pantalla la cantidad
+de ahorros tras el primer, segundo y tercer años. Redondear cada
+cantidad a dos decimales.
+
+#+begin_src python
+
+#+end_src
+
+* ejercicio 18:
+
+Escriba un programa que permita ingresar una cantidad de
+dinero c y un porcentaje p. El programa debe calcular el porcentaje p
+de dinero de c.
+
+#+begin_src python
+
+#+end_src
