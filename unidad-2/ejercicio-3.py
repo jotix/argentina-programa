@@ -1,0 +1,5 @@
+numero1 = input("Ingrese un numero:")
+numero2 = input("Ingrese otro numero:")
+print("La suma es:", numero1 + numero2)
+print("La resta es:", numero1 - numero2)
+print("la multiplicacion es", numero1 * numero2)
