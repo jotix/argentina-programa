@@ -1,0 +1,67 @@
+* Ejercicio 3:
+Escriba un programa que permita que el usuario ingrese dos
+números e imprima por pantalla la suma, resta y multiplicación de
+dichos números.
+#+begin_src python :tangle ./ejercicio3.py
+  numero1 = int(input("Ingrese el primer numero"))
+  numero2 = int(input("Ingrese el primer numero"))
+  print ("La suma de los numeros es:", numero1 + numero2)
+  print ("La resta de los numeros es:", numero1 - numero2)
+  print ("La multiplicacion de los numeros es:", numero1 * numero2)
+#+end_src
+* Ejercicio 4:
+Escriba un programa que permita calcular el área y perímetro
+de un triángulo.
+#+begin_src python :tangle ./ejercicio4.py
+  ### asumo un triangulo equilatero por simplicidad
+  lado = 10
+  altura = 10
+  print("Area del triangulo:", lado * altura / 2)
+  print("Perimetro del triangulo:", lado * 3)
+#+end_src
+* Ejercicio 6:
+Escriba un programa que permita calcular el promedio de cinco
+números ingresados por el usuario.
+#+begin_src python :tangle ./ejercicio6.py
+  numero1 = int(input("Ingrese el primer numero:"))
+  numero2 = int(input("Ingrese el segundo numero:"))
+  numero3 = int(input("Ingrese el tercer numero:"))
+  numero4 = int(input("Ingrese el cuarto numero:"))
+  numero5 = int(input("Ingrese el quinto numero:"))
+  promedio = (numero1 + numero2 + numero3 + numero4 + numero5) / 5
+  print("El promedio es:", promedio)
+#+end_src
+* Ejercicio 13:
+Escriba un programa que pida al usuario dos números m y
+n el programa debe imprimir por pantalla el cociente y el resto de la
+división de m por n. Para este ejercicio asuma que n no puede ser 0.
+#+begin_src python :tangle ./ejercicio13.py
+  n = int(input("ingrese el numero n:"))
+  m = int(input("ingrese el numero m:"))
+  print("el cociente de m por n es:" m // n)
+  print("el resto de la division de m por n es:" m % n)
+#+end_src
+* Ejercicio 16:
+Una juguetería tiene mucho éxito en dos de sus productos:
+payasos y muñecas. Suele hacer venta por correo y la empresa de lo-
+gística les cobra por el peso de cada paquete así que deben calcular el
+peso de los payasos y muñecas que saldrán en cada paquete a demanda.
+Cada payaso pesa 112 g y cada muñeca 75 g. Escriba un programa que
+lea el número de payasos y muñecas vendidos en el último pedido y
+calcule el peso total del paquete que será enviado.
+#+begin_src python :tangle ./ejercicio16.py
+
+#+end_src
+* Ejercicio 17:
+Imagine que acaba de abrir una nueva cuenta de ahorros que
+ofrece el 4 % de interés al año. Estos ahorros debido a intereses, que no
+se cobran hasta finales de año, se añaden al balance final de su cuenta
+de ahorros. Escriba un programa que comience leyendo la cantidad de
+dinero depositada en la cuenta de ahorros, introducida por el usuario.
+Después el programa debe calcular y mostrar por pantalla la canti-
+dad de ahorros tras el primer, segundo y tercer años. Redondear cada
+cantidad a dos decimales.
+
+#+begin_src python :tangle ./ejercicio17.py
+
+#+end_src
