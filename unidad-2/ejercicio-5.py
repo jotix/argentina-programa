@@ -1,3 +1,3 @@
 lado = input("Ingrese lado del cuadrado:")
-print("El perimetro del cuadrado es:" lado * 4)
-print("El area del cuadrado es:" lado ** 2)
+print("El perímetro del cuadrado es:" lado * 4)
+print("El área del cuadrado es:" lado ** 2)

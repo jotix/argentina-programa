@@ -2,56 +2,56 @@
 Escriba un programa que permita que el usuario ingrese un
 número entero y luego lo imprima por pantalla
 #+begin_src python :tangle ./ejercicio-1.py
-  numero_entero = int(input("ingrese un numero entero"))
-  print("El numero ingresado es:", numero_entero)
+  numero_entero = int(input("ingrese un número entero"))
+  print("El número ingresado es:", numero_entero)
 #+end_src
 * Ejercicio 2:
 Escriba un programa que permita que el usuario ingrese un
 número flotante y luego lo imprima por pantalla.
 #+begin_src python :tangle ./ejercicio-2.py
-  numero = float(input("ingrese un numero"))
-  print("El numero ingresado es:", numero)
+  numero = float(input("ingrese un número"))
+  print("El número ingresado es:", numero)
 #+end_src
 * Ejercicio 3:
 Escriba un programa que permita que el usuario ingrese dos
 números e imprima por pantalla la suma, resta y multiplicación de
 dichos números.
 #+begin_src python :tangle ./ejercicio-3.py
-  numero1 = input("Ingrese un numero:")
-  numero2 = input("Ingrese otro numero:")
+  numero1 = input("Ingrese un número:")
+  numero2 = input("Ingrese otro número:")
   print("La suma es:", numero1 + numero2)
   print("La resta es:", numero1 - numero2)
-  print("la multiplicacion es", numero1 * numero2)
+  print("la multiplicación es", numero1 * numero2)
 #+end_src
 * ejercicio 4:
 Escriba un programa que permita calcular el área y perímetro
 de un triángulo.
 #+begin_src python :tangle ./ejercicio-4.py
   ### suponemos que es un triangulo equilatero
-  base = input("ingrese la base del triangulo:")
-  altura = input("Ingrese la altura del triangulo:")
-  print("El area del triangulo es:", base * altura / 2)
-  print("El perimetro del triangulo es:", base * 3)
+  base = input("ingrese la base del triángulo:")
+  altura = input("Ingrese la altura del triángulo:")
+  print("El area del triángulo es:", base * altura / 2)
+  print("El perimetro del triángulo es:", base * 3)
 #+end_src
 * ejercicio 5:
 Escriba un programa que permita calcular el área y perímetro
 de un cuadrado.
 #+begin_src python :tangle ./ejercicio-5.py
   lado = input("Ingrese lado del cuadrado:")
-  print("El perimetro del cuadrado es:" lado * 4)
-  print("El area del cuadrado es:" lado ** 2)
+  print("El perímetro del cuadrado es:" lado * 4)
+  print("El área del cuadrado es:" lado ** 2)
 #+end_src
 * ejercicio 6:
 Escriba un programa que permita calcular el promedio de cinco
 números ingresados por el usuario
 #+begin_src python :tangle ./ejercicio-6.py
-  numero1 = input("ingrese el numero 1:")
-  numero2 = input("ingrese el numero 2:")
-  numero3 = input("ingrese el numero 3:")
-  numero4 = input("ingrese el numero 4:")
-  numero5 = input("ingrese el numero 5:")
+  numero1 = input("ingrese el número 1:")
+  numero2 = input("ingrese el número 2:")
+  numero3 = input("ingrese el número 3:")
+  numero4 = input("ingrese el número 4:")
+  numero5 = input("ingrese el número 5:")
   promedio = (numero1 + numero2 + numero3 + numero4 + numero5) / 5
-  print("El promedio de los numeros es:", promedio)
+  print("El promedio de los números es:", promedio)
 #+end_src
 * ejercicio 7:
 Escriba un programa que imprima por pantalla “Hola Mundo!”
@@ -105,12 +105,12 @@ Escriba un programa que pida al usuario dos números m y
 n el programa debe imprimir por pantalla el cociente y el resto de la
 división de m por n. Para este ejercicio asuma que n no puede ser 0.
 #+begin_src python :tangle ./ejercicio-13.py
-  m = int(input("Ingrese el numero m:"))
-  n = int(input("Ingrese el numero m:"))
+  m = int(input("Ingrese el número m:"))
+  n = int(input("Ingrese el número m:"))
   resto = m % n
   cociente = m // n
-  print("El resto de la division de m pon es:", resto)
-  print("El cociente de la division de m por n es:", cociente)
+  print("El resto de la división de m pon es:", resto)
+  print("El cociente de la división de m por n es:", cociente)
 #+end_src
 * ejercicio 14:
 Escriba un programa que permita realizar la conversión a
@@ -119,7 +119,7 @@ dólares y euros de una cantidad de pesos ingresada por el usuario.
   cotizacion_dolar = 100
   cotizacion_euro = 120
   monto_pesos = float(input("Ingrese el monto en pesos:"))
-  print("Equivalente en dolares:" round(monto_pesos / cotizacion_dolar, 2))
+  print("Equivalente en dólares:" round(monto_pesos / cotizacion_dolar, 2))
   print("Equivalente en euros:" monto_pesos / cotizacion_euro)
 #+end_src
 * ejercicio 15:
@@ -129,7 +129,7 @@ capital obtenido en la inversión.
 #+begin_src python :tangle ./ejercicio-15.py
   cantidad_a_invertir = float(input("Ingrese la cantidad a invertir:"))
   interes_anual = float(input("Ingrese el interes anual:"))
-  cantidad_de_anios = int(input("Ingrese los anios:"))
+  cantidad_de_anios = int(input("Ingrese los años:"))
   capital_obtenido = cantidad_a_invertir * ( (1 + (interes_anual/100)) ** cantidad_de_anios)
   print("Capital obtenido:",  capital_obtenido)
 #+end_src
@@ -142,7 +142,12 @@ Cada payaso pesa 112 g y cada muñeca 75 g. Escriba un programa que
 lea el número de payasos y muñecas vendidos en el último pedido y
 calcule el peso total del paquete que será enviado
 #+begin_src python :tangle ./ejercicio-16.py
-
+  peso_payaso = 112
+  peso_munieca = 75
+  cantidad_payasos = int(input("Ingrese la cantidad de payasos:"))
+  cantidad_muniecas = int(input("Ingrese la cantidad de muñecas:"))
+  peso_total_en_kg = (cantidad_payasos * peso_payaso + cantidad_muniecas * peso_munieca) / 1000
+  print("Peso total del pedido:", peso_total_en_kg, "kg.")
 #+end_src
 * ejercicio 17:
 Imagine que acaba de abrir una nueva cuenta de ahorros que
@@ -154,12 +159,21 @@ Después el programa debe calcular y mostrar por pantalla la cantidad
 de ahorros tras el primer, segundo y tercer años. Redondear cada
 cantidad a dos decimales.
 #+begin_src python :tangle ./ejercicio-17.py
-
+  dinero_depositado = int(input("Ingrese el dinero depositado:"))
+  primer_anio = dinero_depositado * 1.04
+  segundo_anio = primer_anio * 1.04
+  tercer_anio = segundi_anio * 1.04
+  print("Ahorros al finalizar el primer año:", round(primer_anio, 2))
+  print("Ahorros al finalizar el segundo año:", round(segundo_anio, 2))
+  print("Ahorros al finalizar el tercer año:", round(tercer_anio,2))
 #+end_src
 * ejercicio 18:
 Escriba un programa que permita ingresar una cantidad de
 dinero c y un porcentaje p. El programa debe calcular el porcentaje p
 de dinero de c.
 #+begin_src python :tangle ./ejercicio-18.py
-
+  dinero = float(input("Ingrese la cantidad de dinero:"))
+  porcentaje = float(input("Ingrese el porcentaje:"))
+  resultado = dinero * porcentaje / 100
+  print("El", porcentaje, "%", "de", dinero, "es:", round(resultado, 2))
 #+end_src
