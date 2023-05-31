@@ -37,9 +37,9 @@ de un triángulo.
 Escriba un programa que permita calcular el área y perímetro
 de un cuadrado.
 #+begin_src python :tangle ./ejercicio-5.py
-  lado = input("Ingrese lado del cuadrado:")
-  print("El perímetro del cuadrado es:" lado * 4)
-  print("El área del cuadrado es:" lado ** 2)
+  lado = int(input("Ingrese lado del cuadrado:"))
+  print("El perímetro del cuadrado es:", lado * 4)
+  print("El área del cuadrado es:", lado * lado)
 #+end_src
 * ejercicio 6:
 Escriba un programa que permita calcular el promedio de cinco
@@ -81,8 +81,8 @@ del nombre de la persona.
   print("Hola:", nombre)
 #+end_src
 * ejercicio 11:
-Escriba un programa que permita ingresar por teclado el nom-
-bre de una persona, la cantidad de horas trabajadas y luego el costo de
+Escriba un programa que permita ingresar por teclado el nombre
+de una persona, la cantidad de horas trabajadas y luego el costo de
 la hora. El programa debe informar cuánto debe cobrar la persona.
 #+begin_src python :tangle ./ejercicio-11.py
   nombre = input("Ingrese el nombre:")
@@ -91,13 +91,12 @@ la hora. El programa debe informar cuánto debe cobrar la persona.
   print(nombre, "debe cobrar", horas_trabajadas * costo_hora)
 #+end_src
 * ejercicio 12:
-Escriba un programa que calcule el IMC (índice de Masa Cor-
-poral).
+Escriba un programa que calcule el IMC (índice de Masa Corporal).
 #+begin_src python :tangle ./ejercicio-12.py
   # (IMC = peso (kg)/ [estatura (m)]2
   peso = float(input("Ingrese el peso:"))
   estatura = float(input("Ingrese la estatura (en metros):"))
-  imc = peso / (estatura ** 2)
+  imc = peso / (estatura * estatura)
   print("el IMC de la persona es:", imc)
 #+end_src
 * ejercicio 13:
@@ -130,13 +129,14 @@ capital obtenido en la inversión.
   cantidad_a_invertir = float(input("Ingrese la cantidad a invertir:"))
   interes_anual = float(input("Ingrese el interes anual:"))
   cantidad_de_anios = int(input("Ingrese los años:"))
-  capital_obtenido = cantidad_a_invertir * ( (1 + (interes_anual/100)) ** cantidad_de_anios)
+  capital_obtenido = cantidad_a_invertir * \
+      (1 + (interes_anual/100 * cantidad_de_anios)
   print("Capital obtenido:",  capital_obtenido)
 #+end_src
 * ejercicio 16:
 Una juguetería tiene mucho éxito en dos de sus productos:
-payasos y muñecas. Suele hacer venta por correo y la empresa de lo-
-gística les cobra por el peso de cada paquete así que deben calcular el
+payasos y muñecas. Suele hacer venta por correo y la empresa de logística
+les cobra por el peso de cada paquete así que deben calcular el
 peso de los payasos y muñecas que saldrán en cada paquete a demanda.
 Cada payaso pesa 112 g y cada muñeca 75 g. Escriba un programa que
 lea el número de payasos y muñecas vendidos en el último pedido y
@@ -146,7 +146,8 @@ calcule el peso total del paquete que será enviado
   peso_munieca = 75
   cantidad_payasos = int(input("Ingrese la cantidad de payasos:"))
   cantidad_muniecas = int(input("Ingrese la cantidad de muñecas:"))
-  peso_total_en_kg = (cantidad_payasos * peso_payaso + cantidad_muniecas * peso_munieca) / 1000
+  peso_total_en_kg = \
+      (cantidad_payasos * peso_payaso + cantidad_muniecas * peso_munieca) / 1000
   print("Peso total del pedido:", peso_total_en_kg, "kg.")
 #+end_src
 * ejercicio 17:

@@ -1,0 +1,226 @@
+% Created 2023-05-30 Tue 21:49
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\date{\today}
+\title{}
+\hypersetup{
+ pdfauthor={},
+ pdftitle={},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\tableofcontents
+
+\section{Ejercicio 1:}
+\label{sec:org2011be5}
+Escriba un programa que permita que el usuario ingrese un
+número entero y luego lo imprima por pantalla
+\begin{verbatim}
+numero_entero = int(input("ingrese un número entero"))
+print("El número ingresado es:", numero_entero)
+\end{verbatim}
+\section{Ejercicio 2:}
+\label{sec:orgd9ae5cc}
+Escriba un programa que permita que el usuario ingrese un
+número flotante y luego lo imprima por pantalla.
+\begin{verbatim}
+numero = float(input("ingrese un número"))
+print("El número ingresado es:", numero)
+\end{verbatim}
+\section{Ejercicio 3:}
+\label{sec:org22b7e39}
+Escriba un programa que permita que el usuario ingrese dos
+números e imprima por pantalla la suma, resta y multiplicación de
+dichos números.
+\begin{verbatim}
+numero1 = input("Ingrese un número:")
+numero2 = input("Ingrese otro número:")
+print("La suma es:", numero1 + numero2)
+print("La resta es:", numero1 - numero2)
+print("la multiplicación es", numero1 * numero2)
+\end{verbatim}
+\section{ejercicio 4:}
+\label{sec:org2e3e49c}
+Escriba un programa que permita calcular el área y perímetro
+de un triángulo.
+\begin{verbatim}
+### suponemos que es un triangulo equilatero
+base = input("ingrese la base del triángulo:")
+altura = input("Ingrese la altura del triángulo:")
+print("El area del triángulo es:", base * altura / 2)
+print("El perimetro del triángulo es:", base * 3)
+\end{verbatim}
+\section{ejercicio 5:}
+\label{sec:orgce939f8}
+Escriba un programa que permita calcular el área y perímetro
+de un cuadrado.
+\begin{verbatim}
+lado = int(input("Ingrese lado del cuadrado:"))
+print("El perímetro del cuadrado es:", lado * 4)
+print("El área del cuadrado es:", lado * lado)
+\end{verbatim}
+\section{ejercicio 6:}
+\label{sec:orgf6b44b0}
+Escriba un programa que permita calcular el promedio de cinco
+números ingresados por el usuario
+\begin{verbatim}
+numero1 = input("ingrese el número 1:")
+numero2 = input("ingrese el número 2:")
+numero3 = input("ingrese el número 3:")
+numero4 = input("ingrese el número 4:")
+numero5 = input("ingrese el número 5:")
+promedio = (numero1 + numero2 + numero3 + numero4 + numero5) / 5
+print("El promedio de los números es:", promedio)
+\end{verbatim}
+\section{ejercicio 7:}
+\label{sec:org60ad9a9}
+Escriba un programa que imprima por pantalla “Hola Mundo!”
+\begin{verbatim}
+print("Hola Mundo!")
+\end{verbatim}
+\section{ejercicio 8:}
+\label{sec:org221a617}
+Escriba un programa que solicite al usuario un string y luego
+imprima por pantalla dicho string.
+\begin{verbatim}
+string_ingresado = input("Ingrese un string:")
+print("El string ingresado es:", string_ingresado)
+\end{verbatim}
+\section{ejercicio 9:}
+\label{sec:org9b8115e}
+Escriba un programa que permita almacenar un string en la
+variable s y luego muestre por pantalla el contenido de s.
+\begin{verbatim}
+s = input("Ingrese un string:")
+print("El string ingresado es:", s)
+\end{verbatim}
+\section{ejercicio 10:}
+\label{sec:org174fc90}
+Escriba un programa que permita que el usuario ingrese el
+nombre de una persona y luego imprima por pantalla “Hola:” seguido
+del nombre de la persona.
+\begin{verbatim}
+nombre = imput("Ingrese el nombre:")
+print("Hola:", nombre)
+\end{verbatim}
+\section{ejercicio 11:}
+\label{sec:orgdc003e9}
+Escriba un programa que permita ingresar por teclado el nombre
+de una persona, la cantidad de horas trabajadas y luego el costo de
+la hora. El programa debe informar cuánto debe cobrar la persona.
+\begin{verbatim}
+nombre = input("Ingrese el nombre:")
+horas_trabajadas = float(input("Horas trabajadas:"))
+costo_hora = float(input("Costo de la hora:"))
+print(nombre, "debe cobrar", horas_trabajadas * costo_hora)
+\end{verbatim}
+\section{ejercicio 12:}
+\label{sec:orgee5faaa}
+Escriba un programa que calcule el IMC (índice de Masa Corporal).
+\begin{verbatim}
+# (IMC = peso (kg)/ [estatura (m)]2
+peso = float(input("Ingrese el peso:"))
+estatura = float(input("Ingrese la estatura (en metros):"))
+imc = peso / (estatura * estatura)
+print("el IMC de la persona es:", imc)
+\end{verbatim}
+\section{ejercicio 13:}
+\label{sec:orgb07ca24}
+Escriba un programa que pida al usuario dos números m y
+n el programa debe imprimir por pantalla el cociente y el resto de la
+división de m por n. Para este ejercicio asuma que n no puede ser 0.
+\begin{verbatim}
+m = int(input("Ingrese el número m:"))
+n = int(input("Ingrese el número m:"))
+resto = m % n
+cociente = m // n
+print("El resto de la división de m pon es:", resto)
+print("El cociente de la división de m por n es:", cociente)
+\end{verbatim}
+\section{ejercicio 14:}
+\label{sec:orga6a28cc}
+Escriba un programa que permita realizar la conversión a
+dólares y euros de una cantidad de pesos ingresada por el usuario.
+\begin{verbatim}
+cotizacion_dolar = 100
+cotizacion_euro = 120
+monto_pesos = float(input("Ingrese el monto en pesos:"))
+print("Equivalente en dólares:" round(monto_pesos / cotizacion_dolar, 2))
+print("Equivalente en euros:" monto_pesos / cotizacion_euro)
+\end{verbatim}
+\section{ejercicio 15:}
+\label{sec:org15654aa}
+Escribir un programa que pregunte al usuario una cantidad a
+invertir, el interés anual y el número de años, y muestre por pantalla el
+capital obtenido en la inversión.
+\begin{verbatim}
+cantidad_a_invertir = float(input("Ingrese la cantidad a invertir:"))
+interes_anual = float(input("Ingrese el interes anual:"))
+cantidad_de_anios = int(input("Ingrese los años:"))
+capital_obtenido = cantidad_a_invertir * \
+    (1 + (interes_anual/100 * cantidad_de_anios)
+print("Capital obtenido:",  capital_obtenido)
+\end{verbatim}
+\section{ejercicio 16:}
+\label{sec:orgc2d6c15}
+Una juguetería tiene mucho éxito en dos de sus productos:
+payasos y muñecas. Suele hacer venta por correo y la empresa de logística
+les cobra por el peso de cada paquete así que deben calcular el
+peso de los payasos y muñecas que saldrán en cada paquete a demanda.
+Cada payaso pesa 112 g y cada muñeca 75 g. Escriba un programa que
+lea el número de payasos y muñecas vendidos en el último pedido y
+calcule el peso total del paquete que será enviado
+\begin{verbatim}
+peso_payaso = 112
+peso_munieca = 75
+cantidad_payasos = int(input("Ingrese la cantidad de payasos:"))
+cantidad_muniecas = int(input("Ingrese la cantidad de muñecas:"))
+peso_total_en_kg = \
+    (cantidad_payasos * peso_payaso + cantidad_muniecas * peso_munieca) / 1000
+print("Peso total del pedido:", peso_total_en_kg, "kg.")
+\end{verbatim}
+\section{ejercicio 17:}
+\label{sec:org7b024c9}
+Imagine que acaba de abrir una nueva cuenta de ahorros que
+ofrece el 4 \% de interés al año. Estos ahorros debido a intereses, que no
+se cobran hasta finales de año, se añaden al balance final de su cuenta
+de ahorros. Escriba un programa que comience leyendo la cantidad de
+dinero depositada en la cuenta de ahorros, introducida por el usuario.
+Después el programa debe calcular y mostrar por pantalla la cantidad
+de ahorros tras el primer, segundo y tercer años. Redondear cada
+cantidad a dos decimales.
+\begin{verbatim}
+dinero_depositado = int(input("Ingrese el dinero depositado:"))
+primer_anio = dinero_depositado * 1.04
+segundo_anio = primer_anio * 1.04
+tercer_anio = segundi_anio * 1.04
+print("Ahorros al finalizar el primer año:", round(primer_anio, 2))
+print("Ahorros al finalizar el segundo año:", round(segundo_anio, 2))
+print("Ahorros al finalizar el tercer año:", round(tercer_anio,2))
+\end{verbatim}
+\section{ejercicio 18:}
+\label{sec:org26e174f}
+Escriba un programa que permita ingresar una cantidad de
+dinero c y un porcentaje p. El programa debe calcular el porcentaje p
+de dinero de c.
+\begin{verbatim}
+dinero = float(input("Ingrese la cantidad de dinero:"))
+porcentaje = float(input("Ingrese el porcentaje:"))
+resultado = dinero * porcentaje / 100
+print("El", porcentaje, "%", "de", dinero, "es:", round(resultado, 2))
+\end{verbatim}
+\end{document}
