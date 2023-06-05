@@ -1,0 +1,205 @@
+% Created 2023-06-05 Mon 08:03
+% Intended LaTeX compiler: pdflatex
+\documentclass[11pt]{article}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+\usepackage{graphicx}
+\usepackage{longtable}
+\usepackage{wrapfig}
+\usepackage{rotating}
+\usepackage[normalem]{ulem}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{capt-of}
+\usepackage{hyperref}
+\author{Juan Jose Della Vecchia}
+\date{\today}
+\title{Práctico Nro. 3.2: Tipos de Dato Colección - Listas}
+\hypersetup{
+ pdfauthor={Juan Jose Della Vecchia},
+ pdftitle={Práctico Nro. 3.2: Tipos de Dato Colección - Listas},
+ pdfkeywords={},
+ pdfsubject={},
+ pdfcreator={Emacs 28.2 (Org mode 9.5.5)}, 
+ pdflang={English}}
+\begin{document}
+
+\maketitle
+\tableofcontents
+
+Nota: Asuma una cantidad especíca de elementos cuando el ejercicio no lo
+especique.
+
+\section{Ejercicio 1:}
+\label{sec:org10421aa}
+Dada la siguiente lista l=[10,"hola",2.5,20,"que",3.5,30,"tal",4.5]
+se pide recuperar:
+\begin{enumerate}
+\item el 30
+\item "hola"
+\item 10,"hola",2.5
+\item Los strings
+\item Los flotantes
+\item Los enteros
+\end{enumerate}
+\begin{verbatim}
+l = [10,"hola",2.5,20,"que",3.5,30,"tal",4.5]
+print (l[6])
+print (l[2])
+print (l[:3])
+strings = "hola"
+flotantes = 1.0
+enteros = 1
+print ("Los strings son:", strings)
+print ("los flotantes son:", flotantes)
+print ("los enteros son:", enteros)
+\end{verbatim}
+
+\section{Ejercicio 2:}
+\label{sec:orgbb84a5f}
+Realice las siguientes actividades:
+\begin{enumerate}
+\item Defina una lista l de tres números donde cada número es 0.
+\item Defina una lista de un único elemento.
+\item Defina una lista con n 0s.
+\end{enumerate}
+\section{Ejercicio 3:}
+\label{sec:orgd6edd58}
+Defina las listas l0 y l1 cada una con dos elementos numéricos
+
+y luego construya la lista r cuyos elementos son la suma de los elemen-
+tos de l0 y l1. Ejemplo: Si l0=[10,20] y l1=[8,20] la tupla r tiene que
+
+contener r=[18,40].
+\section{Ejercicio 4:}
+\label{sec:orgea5178e}
+Escriba un ejemplo que muestre que las listas son mutables.
+\section{Ejercicio 5:}
+\label{sec:orgd5e9e9f}
+Escriba un programa que dada una lista t con 5 elementos y
+un número n produzca como resultado una nueva lista con todos los
+elementos de la lista t multiplicados por el número n.
+\begin{verbatim}
+l = [ 1, 1, 2, 3, 5]
+n = 3
+nueval = []
+nueval = list(map (lambda el:el*n, l))
+print(nueval)
+\end{verbatim}
+
+\section{Ejercicio 6:}
+\label{sec:orgc642aa1}
+Escriba un programa que almacene el valor de tres variables
+ingresadas por el usuario en una lista.
+\begin{verbatim}
+lista = []
+for x in range(3):
+  n = input ("ingrese un elemento para agregar a la lista: ")
+  lista.append(n)
+
+print(lista)
+\end{verbatim}
+\section{Ejercicio 7:}
+\label{sec:org785c6d5}
+Escriba un programa que:
+\begin{enumerate}
+\item Permita que el usuario ingrese cuatro números, los almacene una
+\end{enumerate}
+lista l.
+\begin{enumerate}
+\item Genere una lista s la cual se obtiene sumando a cada elemento de
+\end{enumerate}
+l un valor ingresado por el usuario.
+\begin{enumerate}
+\item Genere una lista r la cual se obtiene restando a cada elemento de
+\end{enumerate}
+l un valor ingresado por el usuario.
+\begin{enumerate}
+\item Imprima: con leyendas adecuadas la tupla l, s y r.
+\end{enumerate}
+\begin{verbatim}
+lista = []
+for x in range(4):
+  n = int(input ("ingrese un numero para agregar a la lista: "))
+  lista.append(n)
+
+print(lista)
+\end{verbatim}
+\section{Ejercicio 8:}
+\label{sec:orga3b9a95}
+Cree una lista y muestre:
+\begin{enumerate}
+\item El acceso a un elemento de la lista.
+\item Qué sucede si se intenta acceder a una posición inexistente de la
+\end{enumerate}
+lista.
+\begin{enumerate}
+\item Cómo se calcula la longitud de una lista.
+\end{enumerate}
+\section{Ejercicio 9:}
+\label{sec:org24a7ba5}
+Construya un programa que permita que el usuario ingrese una
+lista de dos elementos y luego desempaquete la lista en dos variables a
+y b. Luego el programa debe imprimir las variables a y b.
+\section{Ejercicio 10:}
+\label{sec:orgd5582a3}
+Escriba un programa que permita que el usuario ingrese dos
+valores en las variables a y b y luego empaquete dichos valores en una
+lista. Luego el programa debe imprimir la tupla resultado.
+\section{Ejercicio 11:}
+\label{sec:org455be60}
+Escriba un programa que permita que el usuario ingrese un
+número a y una lista l. Luego el programa debe imprimir True si el
+número a está en l y False en otro caso.
+\section{Ejercicio 12:}
+\label{sec:orga519fc4}
+Escriba un programa que permita que el usuario ingrese un
+número a y una lista l. Luego el programa debe imprimir por pantalla
+la posición del número a en la lista l. En caso de que el número a no se
+encuentre en l el programa debe imprimir -1.
+\section{Ejercicio 13:}
+\label{sec:org43c934f}
+Realice las siguientes actividades:
+\begin{enumerate}
+\item Explique el concepto de rodaja.
+\item Explique el concepto de zancada.
+\item Por cada concepto explicado de ejemplos.
+\end{enumerate}
+\section{Ejercicio 14:}
+\label{sec:org71a819f}
+Escriba un programa que permita que el usuario ingrese un
+número a y una lista l. Luego el programa debe mostrar por pantalla
+la cantidad de veces que aparece el número a en la lista l.
+\section{Ejercicio 15:}
+\label{sec:org599b37b}
+Dada la lista l=[34, 3.2, Juan, Pedro,-2] se pide:
+\begin{enumerate}
+\item Agregue al nal de l un string ingresado por el usuario.
+\item Solicite al usuario un elemento y cuente la cantidad de veces que
+\end{enumerate}
+aparece dicho elemento en l.
+\begin{enumerate}
+\item Pida al usuario una lista s e incorporela al nal de l.
+\item Invierta la lista l.
+\end{enumerate}
+\section{Ejercicio 16:}
+\label{sec:org9a67428}
+Construya un programa que:
+\begin{enumerate}
+\item Permita que el usuario ingrese una lista l de números enteros l.
+\item Ordene la lista
+\item Almacene en la variable mayor el mayor elemento de la lista
+\item Almacene en la variable menor el menor elemento de la lista.
+\item Imprima por pantalla la lista l y el elemento mayor y el elemento
+\end{enumerate}
+menor.
+\section{Ejercicio 17:}
+\label{sec:org77de181}
+Escriba un programa que:
+\begin{enumerate}
+\item Permita que el usuario ingrese una lista l.
+\item Pida al usuario en elemento e.
+\item Pida al usuario una posición p válida.
+\item Inserte en la lista l el elemento e en la posición p.
+\end{enumerate}
+\end{document}

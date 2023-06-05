@@ -1,0 +1,89 @@
+#+TITLE: Práctico Nro.3.3: Tipos de Dato Colección - Conjunto
+#+AUTHOR: Juan Jose Della Vecchia
+#+PROPERTY: header-args+ :mkdirp yes
+#+STARTUP: overview
+
+Nota: Asuma una cantidad especíca de elementos cuando el ejercicio no lo
+especique.
+
+* Ejercicio 1:
+Escriba un programa que:
+1. Defiena el conjunto universal el cual contiene las provincias de Ar-
+gentina.
+2. Pida al usuario una provincia.
+3. Calcule el complemento del conjunto single que contiene la pro-
+vincia ingresada por el usuario.
+#+begin_src python :tangle ./ejercicios/01.py
+
+#+end_src
+* Ejercicio 2:
+Escriba un programa que:
+1. Defina el conjunto universal U el cual está compuesto por los nú-
+meros del 1 al 20.
+2. Pida al usuario dos conjuntos A y B.
+3. Calcule la unión de A y B.
+4. Calcule la intersección de A y B.
+5. Calcule el complemento de las unión e intersección de A y B.
+#+begin_src python :tangle ./ejercicios/02.py
+
+#+end_src
+* Ejercicio 3:
+Realice las siguientes actividades en caso de que sea posible:
+1. Pase un conjunto a un diccionario.
+2. Pase un conjunto a un conjunto congelado.
+3. Pase un conjunto a una lista.
+4. Ordene un conjunto.
+5. Pase un conjunto a una tupla.
+#+begin_src python :tangle ./ejercicios/03.py
+
+#+end_src
+* Ejercicio 4:
+Escriba un programa que a partir de dos conjuntos de números
+enteros ingresados por el usuario cree el conjunto universal el cual está
+formado por todos los números que pertenecen a los conjuntos usados
+en el programa.
+#+begin_src python :tangle ./ejercicios/04.py
+
+#+end_src
+* Ejercicio 5:
+Escriba un programa que:
+1. Ingrese un conjunto.
+2. Imprima por pantalla: la cardinalidad, el mínimo y el máximo.
+#+begin_src python :tangle ./ejercicios/05.py
+
+#+end_src
+* Ejercicio 6:
+Escriba un programa que permita que el usuario ingrese un
+conjunto y un valor. El programa debe informar si valor pertenece a
+conjunto.
+#+begin_src python :tangle ./ejercicios/06.py
+
+#+end_src
+* Ejercicio 7:
+Escriba un programa que permita que el usuario ingrese un
+conjunto y tres valores. El programa debe incorporar esos valores al
+conjunto. Luego imprimir el conjunto resultado por pantalla.
+#+begin_src python :tangle ./ejercicios/07.py
+
+#+end_src
+* Ejercicio 8:
+Se puede incorporar a un conjunto los elementos de una lista
+sin utilizar iteraciones.
+#+begin_src python :tangle ./ejercicios/08.py
+
+#+end_src
+* Ejercicio 9:
+Escriba un programa que permita que el usuario ingrese un
+conjunto c y un valor v y si v está en c lo elimine de c. Luego imprima
+c.
+#+begin_src python :tangle ./ejercicios/09.py
+
+#+end_src
+* Ejercicio 10:
+Escriba un programa que:
+1. Permita que el usuario ingrese un conjunto A.
+2. Permita que el usuario ingrese un conjunto B.
+3. Informe si A es un subconjunto de B o B es un subconjunto de A.
+#+begin_src python :tangle ./ejercicios/10.py
+
+#+end_src
