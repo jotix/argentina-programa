@@ -1,10 +1,11 @@
 #+TITLE: Práctico Nro. 3.2: Tipos de Dato Colección - Listas
-#+AUTHOR: Juan Jose Della Vecchia
+#+AUTHOR: Juan José Della Vecchia
 #+PROPERTY: header-args+ :mkdirp yes
+#+PROPERTY: header-args+ :results output
 #+STARTUP: overview
 
-Nota: Asuma una cantidad especíca de elementos cuando el ejercicio no lo
-especique.
+Nota: Asuma una cantidad específica de elementos cuando el ejercicio no lo
+especifique.
 
 * Ejercicio 1:
 Dada la siguiente lista l=[10,"hola",2.5,20,"que",3.5,30,"tal",4.5]
@@ -15,14 +16,14 @@ se pide recuperar:
 4. Los strings
 5. Los flotantes
 6. Los enteros
-#+begin_src python :tangle ./ejercicios/01.py :results output
+#+begin_src python :tangle ./ejercicios/01.py
   l = [10,"hola",2.5,20,"que",3.5,30,"tal",4.5]
   print (l[6])
   print (l[2])
   print (l[:3])
-  strings = "hola"
-  flotantes = 1.0
-  enteros = 1
+  strings = list(filter(lambda elemento: isinstance(elemento, str), l))
+  flotantes = list(filter(lambda elemento: isinstance(elemento, float), l))
+  enteros = list(filter(lambda elemento: isinstance(elemento, int), l))
   print ("Los strings son:", strings)
   print ("los flotantes son:", flotantes)
   print ("los enteros son:", enteros)
@@ -32,9 +33,9 @@ se pide recuperar:
 : 30
 : 2.5
 : [10, 'hola', 2.5]
-: Los strings son: hola
-: los flotantes son: 1.0
-: los enteros son: 1
+: Los strings son: ['hola', 'que', 'tal']
+: los flotantes son: [2.5, 3.5, 4.5]
+: los enteros son: [10, 20, 30]
 
 * Ejercicio 2:
 Realice las siguientes actividades:
@@ -42,28 +43,53 @@ Realice las siguientes actividades:
 2. Defina una lista de un único elemento.
 3. Defina una lista con n 0s.
 #+begin_src python :tangle ./ejercicios/02.py
-
+lista1 = [0, 0, 0]
+lista2 = ["hola"]
+n = 5
+lista3 = [ 0 for i in range(n)]
+print(lista1)
+print(lista2)
+print(lista3)
 #+end_src
+
+#+RESULTS:
+: [0, 0, 0]
+: ['hola']
+: [0, 0, 0, 0, 0]
+
 * Ejercicio 3:
 Defina las listas l0 y l1 cada una con dos elementos numéricos
-
 y luego construya la lista r cuyos elementos son la suma de los elemen-
 tos de l0 y l1. Ejemplo: Si l0=[10,20] y l1=[8,20] la tupla r tiene que
-
 contener r=[18,40].
 #+begin_src python :tangle ./ejercicios/03.py
-
+l0 = [10, 20]
+l1 = [8, 20]
+r = list(map(lambda n, m: n+m, l0, l1))
+print(r)
 #+end_src
+
+#+RESULTS:
+: [18, 40]
+
 * Ejercicio 4:
 Escriba un ejemplo que muestre que las listas son mutables.
-#+begin_src python :tangle ./ejercicios/04.py
-
+#+begin_src python :tangle ./ejercicios/04.py 
+lista = [0, 1]
+print("La lista es:", lista)
+lista.append(2)
+print("La lista cambio a:", lista)
 #+end_src
+
+#+RESULTS:
+: La lista es: [0, 1]
+: La lista cambio a: [0, 1, 2]
+
 * Ejercicio 5:
 Escriba un programa que dada una lista t con 5 elementos y
 un número n produzca como resultado una nueva lista con todos los
 elementos de la lista t multiplicados por el número n.
-#+begin_src python :tangle ./ejercicios/05.py :results output
+#+begin_src python :tangle ./ejercicios/05.py
   l = [ 1, 1, 2, 3, 5]
   n = 3
   nueval = []
@@ -108,38 +134,76 @@ Cree una lista y muestre:
 2. Qué sucede si se intenta acceder a una posición inexistente de la
 lista.
 3. Cómo se calcula la longitud de una lista.
-#+begin_src python :tangle ./ejercicios/08.py
-
+#+begin_src python :tangle ./ejercicios/08.py 
+lista = [1, 1, 2, 3, 5, 8, 13]
+print("El 5to elemento de la lista es:", lista[5])
+print("La longitud de la lista es:", len(lista))
+try:
+  print(lista[10])
+except Exception as e:
+  print("Intentar acceder a una posición inexistente de la lista da el error:", e)
 #+end_src
+
+#+RESULTS:
+: El 5to elemento de la lista es: 8
+: La longitud de la lista es: 7
+: Tratar de acceder a una posición inexistente de la lista da el sig. error: list index out of range
+
 * Ejercicio 9:
 Construya un programa que permita que el usuario ingrese una
 lista de dos elementos y luego desempaquete la lista en dos variables a
 y b. Luego el programa debe imprimir las variables a y b.
 #+begin_src python :tangle ./ejercicios/09.py
-
+s = input("Ingrese una lista de dos elementos separados por comas:")
+lista = s.split(",")
+a = lista[0]
+b = lista[1]
+print("El elemento a es:", a)
+print("El elemento b es:", b)
 #+end_src
 * Ejercicio 10:
 Escriba un programa que permita que el usuario ingrese dos
 valores en las variables a y b y luego empaquete dichos valores en una
 lista. Luego el programa debe imprimir la tupla resultado.
 #+begin_src python :tangle ./ejercicios/10.py
-
+a = input("Ingrese el elemento a:")
+b = input("Ingrese el elemento b:")
+lista = []
+lista.append(a)
+lista.append(b)
+print(lista)
 #+end_src
+
+#+RESULTS:
+: [1, 2]
+
 * Ejercicio 11:
 Escriba un programa que permita que el usuario ingrese un
 número a y una lista l. Luego el programa debe imprimir True si el
 número a está en l y False en otro caso.
 #+begin_src python :tangle ./ejercicios/11.py
-
+a = int(input("Ingrese un número: "))
+lista = [1, 1, 2, 3, 5, 8, 13] #input("Ingrese una lista: ")
+print(a in lista)
 #+end_src
+
+#+RESULTS:
+: True
+
 * Ejercicio 12:
 Escriba un programa que permita que el usuario ingrese un
 número a y una lista l. Luego el programa debe imprimir por pantalla
 la posición del número a en la lista l. En caso de que el número a no se
 encuentre en l el programa debe imprimir -1.
 #+begin_src python :tangle ./ejercicios/12.py
-
+a = int(input("Ingrese un número: "))
+lista = [1, 1, 2, 3, 5, 8, 13] #input("Ingrese una lista: ")
+print(lista.index(a) if a in lista else -1)
 #+end_src
+
+#+RESULTS:
+: -1
+
 * Ejercicio 13:
 Realice las siguientes actividades:
 1. Explique el concepto de rodaja.
@@ -153,18 +217,33 @@ Escriba un programa que permita que el usuario ingrese un
 número a y una lista l. Luego el programa debe mostrar por pantalla
 la cantidad de veces que aparece el número a en la lista l.
 #+begin_src python :tangle ./ejercicios/14.py
-
+a = int(input("Ingrese un número: "))
+lista = [1, 1, 2, 3, 5, 8, 13] #input("Ingrese una lista: ")
+print(a, "aparece", lista.count(a), "vez/veces en", lista)
 #+end_src
+
+#+RESULTS:
+: 1 aparece 2 vez/veces en [1, 1, 2, 3, 5, 8, 13]
+
 * Ejercicio 15:
 Dada la lista l=[34, 3.2, Juan, Pedro,-2] se pide:
-1. Agregue al nal de l un string ingresado por el usuario.
+1. Agregue al final de l un string ingresado por el usuario.
 2. Solicite al usuario un elemento y cuente la cantidad de veces que
 aparece dicho elemento en l.
-3. Pida al usuario una lista s e incorporela al nal de l.
+3. Pida al usuario una lista s e incorporela al final de l.
 4. Invierta la lista l.
 #+begin_src python :tangle ./ejercicios/15.py
-
+l = [34, 3.2, "Juan", "Pedro", -2]
+cadena = input("Ingrese un elemento para agregar a la lista: ")
+l.append(cadena)
+elem = input("Ingrese un elemento para contar las apariciones en la lista: ")
+print(elem, "aparece", l.count(cadena), "vez/veces en", l)
+s = input("Ingrese una lista para agregar a la anterior, separe los elementos con comas: ")
+nuevalista = l + list(s.split(","))
+nuevalista.reverse()
+print("Nueva lista invertida:", nuevalista)
 #+end_src
+
 * Ejercicio 16:
 Construya un programa que:
 1. Permita que el usuario ingrese una lista l de números enteros l.
@@ -174,8 +253,21 @@ Construya un programa que:
 5. Imprima por pantalla la lista l y el elemento mayor y el elemento
 menor.
 #+begin_src python :tangle ./ejercicios/16.py
-
+s = input("Ingrese una lista, separe los elementos con comas: ")
+lista = s.split(",")
+lista.sort()
+menor = lista[0]
+mayor = lista[len(lista)-1]
+print("Lista ordenada:", lista)
+print("Menor elemento:", menor)
+print("Mayor elemento:", mayor)
 #+end_src
+
+#+RESULTS:
+: Lista: [1, 2, 3, 5, 8, 10, 20, 45]
+: Menor elemento: 1
+: Mayor elemento: 45
+
 * Ejercicio 17:
 Escriba un programa que:
 1. Permita que el usuario ingrese una lista l.
@@ -183,5 +275,7 @@ Escriba un programa que:
 3. Pida al usuario una posición p válida.
 4. Inserte en la lista l el elemento e en la posición p.
 #+begin_src python :tangle ./ejercicios/17.py
+s = input("Ingrese una lista, separe los elementos con comas: ")
+l = s.split(",")
 
 #+end_src
