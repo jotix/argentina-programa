@@ -1,1 +1,6 @@
-
+ingreso = input("Ingrese una lista, separe los elementos con comas: ")
+lista = list(map(lambda elem: int(elem), ingreso.split(",")))
+lista.sort()
+print("Lista ordenada:", lista)
+print("Menor elemento:", lista[0])
+print("Mayor elemento:", lista[len(lista)-1])

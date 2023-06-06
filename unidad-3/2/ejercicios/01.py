@@ -2,9 +2,9 @@ l = [10,"hola",2.5,20,"que",3.5,30,"tal",4.5]
 print (l[6])
 print (l[2])
 print (l[:3])
-strings = "hola"
-flotantes = 1.0
-enteros = 1
+strings = list(filter(lambda elemento: isinstance(elemento, str), l))
+flotantes = list(filter(lambda elemento: isinstance(elemento, float), l))
+enteros = list(filter(lambda elemento: isinstance(elemento, int), l))
 print ("Los strings son:", strings)
 print ("los flotantes son:", flotantes)
 print ("los enteros son:", enteros)
