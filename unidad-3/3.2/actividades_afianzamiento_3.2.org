@@ -1,7 +1,6 @@
 #+TITLE: Práctico Nro. 3.2: Tipos de Dato Colección - Listas
 #+AUTHOR: Juan José Della Vecchia
-#+PROPERTY: header-args+ :mkdirp yes
-#+PROPERTY: header-args+ :results output
+#+PROPERTY: header-args :mkdirp yes :results output
 #+STARTUP: overview
 
 Nota: Asuma una cantidad específica de elementos cuando el ejercicio no lo
@@ -30,6 +29,14 @@ se pide recuperar:
   print ("los flotantes son:", flotantes)
   print ("los enteros son:", enteros)
 #+end_src
+
+#+RESULTS:
+: 30
+: 2.5
+: [10, 'hola', 2.5]
+: Los strings son: ['hola', 'que', 'tal']
+: los flotantes son: [2.5, 3.5, 4.5]
+: los enteros son: [10, 20, 30]
 
 * Ejercicio 2:
 
