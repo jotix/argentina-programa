@@ -1,5 +1,0 @@
-a = int(input("Ingrese un número entero: "))
-ingreso = input("Ingrese una lista de enteros separados por comas: ")
-lista = list(map(lambda elem: int(elem), ingreso.split(",")))
-veces = lista.count(a)
-print(a, "aparece", veces, "vez" if veces == 0 else "veces", lista)

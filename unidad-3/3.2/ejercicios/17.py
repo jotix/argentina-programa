@@ -1,6 +1,0 @@
-s = input("Ingrese una lista, separe los elementos con comas: ")
-l = s.split(",")
-e = input("ingrese un elemento:")
-p = input("ingrese una posicion (la primera posicion es cero)")
-nueva_l = l.insert(p, e)
-print("La nueva lista es:", nueva_l)
