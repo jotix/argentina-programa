@@ -1,0 +1,6 @@
+t = (1, 1, 2, 3, 5)
+n = 3 #int(input("Ingrese un numero para multiplicar la tupla"))
+nueva_t = tuple((map(lambda elem: elem * n, t)))
+print("tupla original", t)
+print("multiplicada por:", n)
+print("nueva tupla:", nueva_t)

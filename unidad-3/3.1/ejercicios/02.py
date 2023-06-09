@@ -1,0 +1,6 @@
+op0=(10,20)
+op1=(8,20)
+r=(op0[0]+op1[0], op0[1]+op1[1])
+print("Tupla 0:", op0)
+print("Tupla 1:", op1)
+print("Suma: ", r)
