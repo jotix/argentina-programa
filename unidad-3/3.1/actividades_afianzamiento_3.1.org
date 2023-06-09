@@ -72,7 +72,7 @@ elementos de la tupla t multiplicados por el número n.
 
 #+begin_src python :tangle ./ejercicios/04.py
   t = (1, 1, 2, 3, 5)
-  n = 3 #int(input("Ingrese un numero para multiplicar la tupla"))
+  n = int(input("Ingrese un numero para multiplicar la tupla: "))
   nueva_t = tuple((map(lambda elem: elem * n, t)))
   print("tupla original", t)
   print("multiplicada por:", n)
@@ -96,12 +96,9 @@ ingresadas por el usuario en una tupla
 * Ejercicio 6:
 
 Escriba un programa que:
-1. Permita que el usuario ingrese cuatro números, los almacene una
-tupla t.
-2. Genere una tupla s la cual se obtiene sumando a cada elemento
-de t un valor ingresado por el usuario.
-3. Genere una tupla r la cual se obtiene restando a cada elemento de
-t un valor ingresado por el usuario.
+1. Permita que el usuario ingrese cuatro números, los almacene una tupla t.
+2. Genere una tupla s la cual se obtiene sumando a cada elemento de t un valor ingresado por el usuario.
+3. Genere una tupla r la cual se obtiene restando a cada elemento de t un valor ingresado por el usuario.
 4. Imprima: con leyendas adecuadas la tupla t, s y r.
 
 #+begin_src python :tangle ./ejercicios/06.py
@@ -121,8 +118,7 @@ t un valor ingresado por el usuario.
 
 Defina una tupla y muestre:
 1. Cómo se accede a un elemento de la tupla?
-2. Qué sucede si se intenta acceder a una posición inexistente de la
-tupla?
+2. Qué sucede si se intenta acceder a una posición inexistente de la tupla?
 3. Cómo se calcula la longitud de una tupla?
 
 #+begin_src python :tangle ./ejercicios/07.py
