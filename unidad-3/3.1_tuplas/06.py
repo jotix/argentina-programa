@@ -8,9 +8,9 @@ Escriba un programa que:
 4. Imprima: con leyendas adecuadas la tupla t, s y r.
 """
 
-t = tuple(list([int(input("Ingrese elemento:")) for i in range(4)]))
-elem_a_sumar = int(input("Ingrese elemento a sumar:"))
-elem_a_restar = int(input("Ingrese elemento a restar:"))
+t = tuple(list([int(input("Ingrese elemento: ")) for i in range(4)]))
+elem_a_sumar = int(input("Ingrese elemento a sumar: "))
+elem_a_restar = int(input("Ingrese elemento a restar: "))
 s = tuple(map(lambda elem: elem + elem_a_sumar, t))
 r = tuple(map(lambda elem: elem - elem_a_restar, t))
 print("original:", t)
