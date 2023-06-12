@@ -7,9 +7,3 @@ Ejemplo: Si op0=(10,20) y op1=(8,20) la tupla r tiene que contener
 r=(18,40).
 """
 
-op0=(10,20)
-op1=(8,20)
-r=(op0[0]+op1[0], op0[1]+op1[1])
-print("Tupla 0:", op0)
-print("Tupla 1:", op1)
-print("Suma: ", r)
