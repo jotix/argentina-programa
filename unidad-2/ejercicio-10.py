@@ -1,2 +1,2 @@
-nombre = imput("Ingrese el nombre:")
+nombre = input("Ingrese el nombre:")
 print("Hola:", nombre)
