@@ -1,7 +1,0 @@
-#+TITLE: Práctico Nro. 3.2: Tipos de Dato Colección - Listas
-#+AUTHOR: Juan José Della Vecchia
-#+STARTUP: overview
-
-Nota: Asuma una cantidad específica de elementos cuando el ejercicio no lo
-especifique.
-
