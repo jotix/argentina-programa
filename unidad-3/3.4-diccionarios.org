@@ -1,0 +1,224 @@
+#+TITLE: Práctico Nro.3.4: Tipos de Dato Colección - Diccionario
+#+AUTHOR: Juan Jose Della Vecchia
+#+STARTUP: overview
+
+Nota: Asuma una cantidad específica de elementos cuando el ejercicio no lo
+especifique.
+
+* Ejercicio 1:
+
+Muestre diferentes formas de crear un diccionario vacío.
+
+#+begin_src python 
+
+#+end_src
+
+* Ejercicio 2:
+
+Dado el siguiente diccionario d={1:"Daniel", 2:"Germán", 3:"
+Analía", 4:"José", 5:"Gabriel"} se pide:
+1. Devuelva el valor asociado a la clave 3.
+2. Calcule la longitud del diccionario.
+3. Devuelva las claves del diccionario.
+4. Devuelva los valores del diccionario.
+
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 3:
+
+Escriba un programa que permita que el usuario ingrese una
+lista de duplas ln. Cada dupla tiene como primer componente un nom-
+bre y como segunda componente un número. Luego cree un diccionario
+cuyas claves son los nombres en ln y cuyo valor sean enteros.
+
+#+begin_src python
+lista=[]
+for i in range(3):
+	#lista.append([])
+	n=str(input("Ingrese un nombre: "))
+	v=int(input("Ingrese un numero: "))
+	lista.append([n,v])
+    #for j in range(1):
+	#	n=str(input("Ingrese un nombre: "))
+	#	v=int(input("Ingrese un numero: "))
+	#	lista[i]+=n,v
+print (lista)
+d=dict(lista)
+print(d)
+#+end_src
+
+* Ejercicio 4:
+
+Escriba un programa que:
+1. Permita que el usuario ingrese un diccionario d.
+2. Permita que el usuario ingrese un elemento e.
+3. Cuente cuántas veces aparece e en los valores de d.
+
+#+begin_src python
+  d = {}
+  while True:
+    clave = input("Ingrese una clave, ingrese 'fin' para terminar: ")
+    if clave == "fin":
+      break
+    elemento = input("Ingrese un elemento: ")
+    d.update({clave : elemento})
+
+  e = input("Ingrese un elemento para buscar: ")
+  print("El valor aparece en el diccionario:", e in d.values())
+#+end_src
+
+* Ejercicio 5:
+
+Escriba un programa que:
+1. Permita que el usuario ingrese un diccionario d.
+2. Permita que el usuario ingrese una clave c.
+3. Imprima por pantalla si la clave c está en el diccionario d.
+
+#+begin_src python
+  d = {}
+  while True:
+    clave = input("Ingrese una clave, ingrese 'fin' para terminar: ")
+    if clave == "fin":
+      break
+    elemento = input("Ingrese un elemento: ")
+    d.update({clave : elemento})
+
+  c = input("Ingrese una clave para buscar: ")
+  print("La clave aparece en el diccionario:", c in d.keys())
+#+end_src
+
+* Ejercicio 6:
+
+Escriba un programa que permita que el usuario ingrese un dic-
+cionario. El programa debe imprimir una lista de tuplas donde en cada
+tupla tiene como primer elemento la clave y como segundo elemento el
+valor asociado a la clave.
+
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 7:
+
+Escriba un programa que permita almacenar en un diccionario
+tres personas. Por cada persona se registra: el dni, nombre, domicilio y
+edad. Use como clave para el diccionario el dni.
+
+#+begin_src python
+  d = {}
+
+  for i in range(3):
+      dni = int(input("Ingrese su DNI: "))
+      nombre = input("Ingrese su nombre: ")
+      domicilio = input("Ingrese su domicilio: ")
+      edad =  int(input("Ingrese su edad: "))
+    
+      d[dni] = [nombre, domicilio, edad]
+    
+  print(d)
+#+end_src
+
+* Ejercicio 8:
+
+Escriba un ejemplo que muestre que los diccionarios son mu-
+tables.
+
+#+begin_src python
+  d = { 1 : "hola"}
+  print("Diccionadio original:", d)
+  d.update({2 : "que", 3 : "tal"})
+  print("Diccionario mutado:", d)
+#+end_src
+
+* Ejercicio 9:
+
+Defina un diccionario y muestre:
+1. Cómo se accede a un elemento de un diccionario
+2. Qué sucede si se intenta acceder al diccionario con una clave in-
+existente.
+3. ¿Cómo se calcula la longitud de un diccionario?
+
+#+begin_src python
+  dicc = { 1 : "azul", 2 : "rojo", 3 : "naranja"}
+#+end_src
+
+* Ejercicio 10:
+
+Escriba un programa que permite que el usuario ingrese dos
+valores en las variables a y b y luego determinaa si dichos valores se
+encuentran almacenados como valor en el diccionario d. El diccionario
+d es ingresado por el usuario.
+
+#+begin_src python
+# Paso 1: Permitir que el usuario ingrese un diccionario
+d = {}
+num_pares = int(input("Ingrese el número de pares clave-valor: "))
+
+for i in range(num_pares):
+    clave = input("Ingrese una clave: ")
+    valor = input("Ingrese un valor: ")
+    d[clave] = valor
+
+# Paso 2: Permitir que el usuario ingrese los valores a y b
+a = input("Ingrese el valor a: ")
+b = input("Ingrese el valor b: ")
+
+# Paso 3: Verificar si los valores a y b están en el diccionario
+if a in d.values():
+    print("El valor a se encuentra en el diccionario.")
+else:
+    print("El valor a no se encuentra en el diccionario.")
+
+if b in d.values():
+    print("El valor b se encuentra en el diccionario.")
+else:
+    print("El valor b no se encuentra en el diccionario.")
+#+end_src
+
+* Ejercicio 11:
+
+Escriba un programa que permita que el usuario ingrese un
+número a y una tupla t. Luego el programa debe insertar en el diccio-
+nario d el par a,t.
+
+#+begin_src python
+  a = int(input("Ingrese un numero: "))
+  t_aux = input("Ingrese una tupla, separe los elementos con comas: ")
+  t = tuple(t_aux.split(","))
+  print(t)
+#+end_src
+
+* Ejercicio 12:
+
+Se pueden sacar rodajas en los diccionarios.
+
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 13:
+
+Se pueden hacer zancadas en los diccionarios.
+
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 14:
+
+Escriba un programa que permita que el usuario ingrese dos
+diccionarios a y b y a partir de ellos cree las siguientes vistas:
+1. u el cual contiene la unión de la vista de claves de a con la vista
+de claves de b.
+2. i el cual contiene la intersección de la vista de claves de a con la
+vista de claves de b.
+3. d la cual contiene la diferencia entre la vista de claves de a con la
+vista de claves de b.
+4. ds la cual contiene la diferencia simétrica de la visa de claves de a
+con la vista de claves de b.
+
+#+begin_src python
+
+#+end_src
