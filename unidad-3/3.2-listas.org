@@ -177,7 +177,11 @@ Realice las siguientes actividades:
 2. Explique el concepto de zancada.
 3. Por cada concepto explicado de ejemplos.
 #+begin_src python :tangle
-
+  tupla = [1, 1, 2, 3, 5, 8, 13]
+  print("Tupla definida:", tupla)
+  print("Rodaja tupla[2:4]:", tupla[2:4])
+  print("Rodaja tupla[4:]:", tupla[4:])
+  print("Rodaja tupla[:2]:", tupla[:2])
 #+end_src
 
 * Ejercicio 14:
@@ -240,7 +244,9 @@ Escriba un programa que:
 4. Inserte en la lista l el elemento e en la posición p.
 #+begin_src python
   s = input("Ingrese una lista, separe los elementos con comas: ")
-  l = s.split(",")
-  e = input("ingrese un elemento:")
-  p = input("ingrese una posicion (la primara posicion es cero)")
+  l = list(s.split(","))
+  e = input("ingrese un elemento: ")
+  p = int(input("ingrese una posicion (la primara posicion es cero): "))
+  l.insert(p, e)
+  print("Resultado:", l)
 #+end_src

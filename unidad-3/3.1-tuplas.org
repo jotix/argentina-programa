@@ -162,7 +162,11 @@ Realice las siguientes actividades:
 2. Explique el concepto de zancada.
 3. Por cada concepto explicado de ejemplos.
 #+begin_src python
-
+  tupla = (1, 1, 2, 3, 5, 8, 13)
+  print("Tupla definida:", tupla)
+  print("Rodaja tupla[2:4]:", tupla[2:4])
+  print("Rodaja tupla[4:]:", tupla[4:])
+  print("Rodaja tupla[:2]:", tupla[:2])
 #+end_src
 
 * Ejercicio 13:
@@ -176,7 +180,6 @@ la cantidad de veces que aparece el número a en la tupla t.
   repeticiones = t.count(a)
   glue = "no aparece" if repeticiones == 0 else ("aparece 1 vez" if repeticiones == 1 else "aparece "+str(repeticiones)+" veces")
   print("El elemento", a, glue, "en", t)
-
 #+end_src
 
 * Ejercicio 14:
