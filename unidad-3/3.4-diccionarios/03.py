@@ -15,3 +15,4 @@ while True:
 print ("Lista ingresada", lista)
 d = dict(lista)
 print("Diccionario resultado:", d)
+

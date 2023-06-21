@@ -2,9 +2,9 @@
 # Escriba un programa que permite que el usuario ingrese dos
 # valores en las variables a y b y luego determinaa si dichos valores se
 # encuentran almacenados como valor en el diccionario d. El diccionario
-# d es ingresado por el usuario.
-
+# d es ingresado por el usuario
 # Paso 1: Permitir que el usuario ingrese un diccionario
+
 d = {}
 num_pares = int(input("Ingrese el número de pares clave-valor: "))
 
