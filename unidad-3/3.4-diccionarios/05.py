@@ -14,4 +14,3 @@ while True:
 
 c = input("Ingrese una clave para buscar: ")
 print("La clave aparece en el diccionario:", c in d.keys())
-
