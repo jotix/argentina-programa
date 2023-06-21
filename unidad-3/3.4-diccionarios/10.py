@@ -28,4 +28,3 @@ if b in d.values():
     print("El valor b se encuentra en el diccionario.")
 else:
     print("El valor b no se encuentra en el diccionario.")
-

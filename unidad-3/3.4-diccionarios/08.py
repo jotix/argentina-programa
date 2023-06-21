@@ -6,4 +6,3 @@ d = { 1 : "hola"}
 print("Diccionadio original:", d)
 d.update({2 : "que", 3 : "tal"})
 print("Diccionario mutado:", d)
-

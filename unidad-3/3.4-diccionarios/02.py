@@ -10,4 +10,3 @@ print("Valor asociado con la clave 3:", d[3])
 print("Longitud del diccionario:", len(d))
 print("Claves del diccionario:", d.keys())
 print("Valores del diccionario:", d.values())
-

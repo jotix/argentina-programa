@@ -18,4 +18,3 @@ for elem in d:
     lista.append((elem,d[elem]))
 
 print("Diccionario convertido en uns lista de tuplas:", lista)
-

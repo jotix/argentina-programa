@@ -14,4 +14,3 @@ while True:
 
 e = input("Ingrese un elemento para buscar: ")
 print("El valor aparece en el diccionario:", e in d.values())
-

@@ -9,4 +9,3 @@ t = tuple(t_aux.split(","))
 print(f"Insertando el par {a} : {t} en un diccionario")
 dicc = {a : t}
 print(f"Diccionario resultado: {dicc}")
-

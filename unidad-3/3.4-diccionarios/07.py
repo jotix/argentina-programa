@@ -14,4 +14,3 @@ for i in range(3):
     d[dni] = [nombre, domicilio, edad]
   
 print(d)
-
