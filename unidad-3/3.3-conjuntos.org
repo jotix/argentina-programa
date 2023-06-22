@@ -129,13 +129,24 @@ Escriba un programa que permita que el usuario ingrese un
 conjunto y tres valores. El programa debe incorporar esos valores al
 conjunto. Luego imprimir el conjunto resultado por pantalla.
 #+begin_src python
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+A = set(aux1.split(","))
+for i in range (3):
+    e = input("Ingrese un elemento para buscar agregar a A: ")
+    A.add(e)
 
+print("Conjunto resultante:", A)
 #+end_src
 
 * Ejercicio 8:
+Se puede incorporar a un conjunto los elementos de una lista
 sin utilizar iteraciones.
 #+begin_src python
-
+# si, se puede utilizando el método update
+A = {1, 2, 3, 4}
+l = [5, 6, 7, 8]
+A.update(set(l))
+print(A)
 #+end_src
 
 * Ejercicio 9:
