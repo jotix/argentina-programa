@@ -61,7 +61,27 @@ Realice las siguientes actividades en caso de que sea posible:
 4. Ordene un conjunto.
 5. Pase un conjunto a una tupla.
 #+begin_src python
+A = {5, 2, 3, 1, 4}
+print("Conjunto:", A)
 
+# Punto 1, no se puede
+# dicc = dict(A) # error
+
+# Punto 2
+frozenA = frozenset(A)
+print("Convertido a conjunto congelado:", frozenA)
+
+# Punto 3
+lista = list(A)
+print("Convertido a lista:", lista)
+
+# Punto 4
+Aordenado = sorted(A)
+print("Conjunto ordenado:", Aordenado) # lo ordena y transforma a una lista
+
+# Punto 5
+tupla = tuple(A)
+print("Convertido a tupla:", tupla)
 #+end_src
 
 * Ejercicio 4:
@@ -70,7 +90,14 @@ enteros ingresados por el usuario cree el conjunto universal el cual está
 formado por todos los números que pertenecen a los conjuntos usados
 en el programa.
 #+begin_src python
-
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+aux2 = input("Ingrese el conjunto B, separe los elementos con comas: ") 
+A = set(map(lambda elem: int(elem), aux1.split(",")))
+B = set(map(lambda elem: int(elem), aux2.split(",")))
+C = A | B
+print("Conjunto A:", A)
+print("Conjunto B:", B)
+print("Conjunto C:", C)
 #+end_src
 
 * Ejercicio 5:
@@ -78,7 +105,11 @@ Escriba un programa que:
 1. Ingrese un conjunto.
 2. Imprima por pantalla: la cardinalidad, el mínimo y el máximo.
 #+begin_src python
-
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+A = set(map(lambda elem: int(elem), aux1.split(",")))
+print("Cardinalidad de A:", len(A))
+print("Mínimo elemento de A:", min(A))
+print("Máximo elemento de A:", max(A))
 #+end_src
 
 * Ejercicio 6:
@@ -86,7 +117,11 @@ Escriba un programa que permita que el usuario ingrese un
 conjunto y un valor. El programa debe informar si valor pertenece a
 conjunto.
 #+begin_src python
-
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+A = set(aux1.split(","))
+e = input("Ingrese un elemento para buscar dentro de A: ")
+pertenece = e in A
+print("El elemento", e, "NO" if not pertenece else "", "pertenece al conjunto", A)
 #+end_src
 
 * Ejercicio 7:
