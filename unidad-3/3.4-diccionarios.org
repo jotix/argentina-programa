@@ -88,7 +88,17 @@ cionario. El programa debe imprimir una lista de tuplas donde en cada
 tupla tiene como primer elemento la clave y como segundo elemento el
 valor asociado a la clave.
 #+begin_src python
+d = {}
+while True:
+  clave = input("Ingrese una clave, ingrese 'fin' para terminar: ")
+  if clave == "fin":
+    break
+  elemento = input("Ingrese un elemento: ")
+  d.update({clave : elemento})
 
+#for par in d:
+lista = list((key, d[key]) for key in d) 
+print(lista)
 #+end_src
 
 * Ejercicio 7:
