@@ -154,7 +154,12 @@ Escriba un programa que permita que el usuario ingrese un
 conjunto c y un valor v y si v está en c lo elimine de c. Luego imprima
 c.
 #+begin_src python
-
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+c = set(aux1.split(","))
+v = input("Ingrese un valor: ")
+if v in c:
+    c.remove(v)
+print("Conjunto resultado:", c)
 #+end_src
 
 * Ejercicio 10:
@@ -163,5 +168,10 @@ Escriba un programa que:
 2. Permita que el usuario ingrese un conjunto B.
 3. Informe si A es un subconjunto de B o B es un subconjunto de A.
 #+begin_src python
-
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+aux2 = input("Ingrese el conjunto B, separe los elementos con comas: ") 
+A = set(aux1.split(","))
+B = set(aux2.split(","))
+print("A es subconjunto de B:", A.issubset(B))
+print("B es subconjunto de A:", B.issubset(A))
 #+end_src
