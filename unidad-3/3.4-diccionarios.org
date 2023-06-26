@@ -8,8 +8,8 @@ especifique.
 * Ejercicio 1:
 Muestre diferentes formas de crear un diccionario vacío.
 #+begin_src python :tangle 01.py 
-  d = {}
-  d1 = dict()
+d = {}
+d1 = dict()
 #+end_src
 
 * Ejercicio 2:
@@ -20,11 +20,11 @@ Analía", 4:"José", 5:"Gabriel"} se pide:
 3. Devuelva las claves del diccionario.
 4. Devuelva los valores del diccionario.
 #+begin_src python
-  d = {1:"Daniel", 2:"Germán", 3:"Analía", 4:"José", 5:"Gabriel"}
-  print("Valor asociado con la clave 3:", d[3])
-  print("Longitud del diccionario:", len(d))
-  print("Claves del diccionario:", d.keys())
-  print("Valores del diccionario:", d.values())
+d = {1:"Daniel", 2:"Germán", 3:"Analía", 4:"José", 5:"Gabriel"}
+print("Valor asociado con la clave 3:", d[3])
+print("Longitud del diccionario:", len(d))
+print("Claves del diccionario:", d.keys())
+print("Valores del diccionario:", d.values())
 #+end_src
 
 * Ejercicio 3:
@@ -142,29 +142,19 @@ valores en las variables a y b y luego determinaa si dichos valores se
 encuentran almacenados como valor en el diccionario d. El diccionario
 d es ingresado por el usuario.
 #+begin_src python
-# Paso 1: Permitir que el usuario ingrese un diccionario
 d = {}
-num_pares = int(input("Ingrese el número de pares clave-valor: "))
+while True:
+  clave = input("Ingrese una clave, ingrese 'fin' para terminar: ")
+  if clave == "fin":
+    break
+  elemento = input("Ingrese un elemento: ")
+  d.update({clave : elemento})
 
-for i in range(num_pares):
-    clave = input("Ingrese una clave: ")
-    valor = input("Ingrese un valor: ")
-    d[clave] = valor
+a = input("Ingrese la variable a: ")
+b = input("Ingrese la variable b: ")
 
-# Paso 2: Permitir que el usuario ingrese los valores a y b
-a = input("Ingrese el valor a: ")
-b = input("Ingrese el valor b: ")
-
-# Paso 3: Verificar si los valores a y b están en el diccionario
-if a in d.values():
-    print("El valor a se encuentra en el diccionario.")
-else:
-    print("El valor a no se encuentra en el diccionario.")
-
-if b in d.values():
-    print("El valor b se encuentra en el diccionario.")
-else:
-    print("El valor b no se encuentra en el diccionario.")
+print("la variable a", "\b" if a in d.values() else "NO", "se encuentra en los valores del diccionario d")
+print("la variable b", "\b" if b in d.values() else "NO", "se encuentra en los valores del diccionario d")
 #+end_src
 
 * Ejercicio 11:
@@ -183,13 +173,13 @@ print(f"Diccionario resultado: {dicc}")
 * Ejercicio 12:
 Se pueden sacar rodajas en los diccionarios.
 #+begin_src python
-
+# No se puede, los diccionarios con con tipos de datos ordenados
 #+end_src
 
 * Ejercicio 13:
 Se pueden hacer zancadas en los diccionarios.
 #+begin_src python
-
+# No se puede, los diccionarios con con tipos de datos ordenados
 #+end_src
 
 * Ejercicio 14:
