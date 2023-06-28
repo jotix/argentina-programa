@@ -82,18 +82,18 @@ a mostrar el menú de opciones.
 Dado el siguiente programa:
 #+begin_src python
 def coordenadaZ (x, y) :
-  x = x + 10
-  y = y + 15
-  return x + y
+    x = x + 10
+    y = y + 15
+    return x + y
 
 #programa principal
 x = int (input("Coordenada eje x : "))
 y = int (input("Coordenada eje y : "))
 for i in range (3) :
-  z = coordenadaZ(x, y)
-  x = x + 1
-  y = y + 1
-  print (x, " . ", y, " . ", z )
+    z = coordenadaZ(x, y)
+    x = x + 1
+    y = y + 1
+    print (x, " . ", y, " . ", z )
 #+end_src
 Se pide:
 1. De un ejemplo de ejecución del programa.
@@ -109,10 +109,10 @@ Se pide:
 Dado el siguiente programa:
 #+begin_src python
 def maximo(x, y):
-  return x if x > y else y
+    return x if x > y else y
 
 def minimo(x, y):
-  return x if x < y else y
+    return x if x < y else y
 
 # programa principal
 x = int(input("Un número: " ))
@@ -182,6 +182,39 @@ Luego construya un programa principal que permita probar las funciones.
 Esto es invocarlas con argumentos correctos e incorrectos. Maneje
 los errores que surgen por la invocación de argumentos incorrectos con
 excepciones.
-#+begin_src python
+#+begin_src python :tangle 12.py
+# ineficiente en uso de memoria
+def factorial(n):
+    if n <= 1:
+        return n
+    else:
+        return n * factorial(n-1)
 
+# factorial optimizado con recursión de cola
+# (usa menos memoria)    
+def factorial2(n, a=1):
+    if n <= 1:
+        return a
+    return factorial2(n-1, n*a)
+    
+# muy ineficiente, tarda demasiado con n>30    
+def fibonacci(n):
+    if n <= 1:
+        return n
+    return fibonacci(n-1) + fibonacci(n-2)
+
+# fibonacci optimizada con un cache
+# (es mucho mas eficiente en tiempo de ejecución)
+fib_array = [0, 1]    
+def fibonacci2(n):
+    if n < len(fib_array):
+        return fib_array[n]
+    fib_array.append(fibonacci2(n-1) + fibonacci2(n-2))
+    return fib_array[n]
+
+n = int(input("Ingrese un número entero: "))
+print("Factorial de", n, "es", factorial(n))
+print("Factorial2 de", n, "es", factorial2(n))
+#print("Fibonacci de", n, "es", fibonacci(n))
+print("Fibonacci2 de", n, "es", fibonacci2(n))
 #+end_src
