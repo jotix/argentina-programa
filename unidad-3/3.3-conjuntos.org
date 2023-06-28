@@ -75,9 +75,9 @@ print("Convertido a conjunto congelado:", frozenA)
 lista = list(A)
 print("Convertido a lista:", lista)
 
-# Punto 4
+# Punto 4: Se puede a medias, se puede ordenar, pero lo trnasforma en una lista
 Aordenado = sorted(A)
-print("Conjunto ordenado:", Aordenado) # lo ordena y transforma a una lista
+print("Conjunto ordenado:", Aordenado) 
 
 # Punto 5
 tupla = tuple(A)
@@ -92,8 +92,9 @@ en el programa.
 #+begin_src python
 aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
 aux2 = input("Ingrese el conjunto B, separe los elementos con comas: ") 
-A = set(map(lambda elem: int(elem), aux1.split(",")))
-B = set(map(lambda elem: int(elem), aux2.split(",")))
+A = set(int(elem) for elem in aux1.split(","))
+B = set(int(elem) for elem in aux2.split(","))
+
 C = A | B
 print("Conjunto A:", A)
 print("Conjunto B:", B)
@@ -106,7 +107,7 @@ Escriba un programa que:
 2. Imprima por pantalla: la cardinalidad, el mínimo y el máximo.
 #+begin_src python
 aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
-A = set(map(lambda elem: int(elem), aux1.split(",")))
+A = set(int(elem) for elem in aux1.split(","))
 print("Cardinalidad de A:", len(A))
 print("Mínimo elemento de A:", min(A))
 print("Máximo elemento de A:", max(A))
@@ -117,11 +118,10 @@ Escriba un programa que permita que el usuario ingrese un
 conjunto y un valor. El programa debe informar si valor pertenece a
 conjunto.
 #+begin_src python
-aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
+aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ")
 A = set(aux1.split(","))
 e = input("Ingrese un elemento para buscar dentro de A: ")
-pertenece = e in A
-print("El elemento", e, "NO" if not pertenece else "", "pertenece al conjunto", A)
+print("El elemento", e, "\b" if e in A else "NO", "pertenece al conjunto", A)
 #+end_src
 
 * Ejercicio 7:
@@ -157,8 +157,7 @@ c.
 aux1 = input("Ingrese el conjunto A, separe los elementos con comas: ") 
 c = set(aux1.split(","))
 v = input("Ingrese un valor: ")
-if v in c:
-    c.remove(v)
+c.discard(v)
 print("Conjunto resultado:", c)
 #+end_src
 
