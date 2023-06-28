@@ -1,0 +1,166 @@
+#+TITLE: Práctico Nro. 4.1: Bifurcación Condicional
+#+AUTHOR: Juan Jose Della Vecchia
+#+STARTUP: overview
+
+* Ejercicio 1:
+Escriba un programa que permita que el usuario ingrese un
+número el programa debe informar si el número ingresado es par o
+impar.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 2:
+Escriba un programa que permita que el usuario ingrese un
+número n. El programa debe informar si el número es capicúa o no.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 3:
+Escriba un programa que muestre las siguientes opciones:
+1. Calcular el perímetro de un triángulo.
+2. Calcular el área de un triángulo.
+   Luego dependiendo de la opción elegida por el usuario calcule el área
+   o perímetro de un triángulo cuyos datos son también ingresados por el
+   usuario.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 4:
+Escriba un programa que permita determinar si una ecuación
+de segundo grado tiene:
+1. Dos soluciones reales distintas. Una ecuación de segundo grado
+   tiene dos soluciones si el discriminante b2−4ac es mayor que cero.
+2. Una única solución real. Una ecuación de segundo grado tiene dos
+   soluciones si el discriminante b2−4ac es igual que cero.
+3. No tiene solución real. Una ecuación de segundo grado tiene dos
+   soluciones si el discriminante b2−4ac es menor que cero.
+Nota: Todos los valores requeridos por la ecuación son ingresados por
+el usuario.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 5:
+Escriba un programa que permita que el usuario ingrese dos
+valores numéricos. Luego el programa le pregunta al usuario si quiere
+sumar, restar dividir o multiplicar y dependiendo de la opción elegida
+el programa realiza la operación correspondiente.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 6:
+Escriba un programa que permita que el usuario ingrese el
+nombre de dos equipos y la cantidad de goles que han hecho en un
+partido. Luego el programa imprime el nombre del equipo ganador y
+bien el nombre de los dos equipos en caso de empate.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 7:
+Escriba un programa que pregunte al usuario su edad y muestre
+por pantalla si es mayor de edad o no. El programa también le debe
+solicitar al usuario la edad a partir de la cual se considera una persona
+mayor de edad.
+Ejercicio 8: Escriba un programa que:
+1. Almacene una contraseña en una variable.
+2. Pregunte al usuario por la contraseña.
+3. Imprima por pantalla si la contraseña introducida por el usuario
+   coincide con la guardada en la variable sin tener en cuenta
+   mayúsculas y minúsculas.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 9:
+Para tributar un determinado impuesto se debe ser mayor de
+16 años y tener unos ingresos iguales o superiores a $1000 mensuales.
+Escriba un programa que pregunte al usuario su edad y sus ingresos
+mensuales y muestre por pantalla si el usuario tiene que tributar o no.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 10:
+Los alumnos de un curso se han dividido en dos grupos A y
+B de acuerdo al sexo y el nombre. El grupo A esta formado por las
+mujeres con un nombre anterior a la M y los hombres con un nombre
+posterior a la N y el grupo B por el resto. Escriba un programa que
+pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo
+que le corresponde.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 11:
+Los tramos impositivos para la declaración de la renta en un
+determinado país son mostrados en la tabla 1.
+
+| Renta                 | Tipo Impositivo |
+|-----------------------+-----------------|
+| Menos de $10000       | 5 %             |
+| Entre $10000 y $20000 | 15 %            |
+| Entre $20000 y $35000 | 20 %            |
+| Entre $35000 y $60000 | 30 %            |
+| Más de $60000         | 45 %            |
+Cuadro 1: Tramos Impositivos
+
+Escriba un programa que pregunte al usuario su renta anual y muestre
+por pantalla el tipo impositivo que le corresponde.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 12:
+En una determinada empresa, sus empleados son evaluados
+al final de cada año. Los puntos que pueden obtener en la evaluación
+comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores
+beneficios. Los puntos que pueden conseguir los empleados pueden ser
+0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas.
+A continuación se muestra una tabla con los niveles correspondientes
+a cada puntuación. La cantidad de dinero conseguida en cada
+nivel es de $2.400 multiplicada por la puntuación del nivel.
+
+| Nivel       | Puntuación |
+|-------------+------------|
+| Inaceptable |        0.0 |
+| Aceptable   |        0.4 |
+| Meritorio   |  0.6 o más |
+
+Escriba un programa que lea la puntuación del usuario e indique su
+nivel de rendimiento, así como la cantidad de dinero que recibirá el
+usuario.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 13:
+Escriba un programa para una empresa que tiene salas de
+juegos para todas las edades y quiere calcular de forma automática
+el precio que debe cobrar a sus clientes por entrar. El programa debe
+preguntar al usuario la edad del cliente y mostrar el precio de la entrada.
+Si el cliente es menor de 4 años puede entrar gratis, si tiene entre 4 y
+18 años debe pagar $5 y si es mayor de 18 años, $10.
+#+begin_src python
+
+#+end_src
+
+* Ejercicio 14:
+La pizzería Roma ofrece pizzas vegetarianas y no vegetarianas
+a sus clientes. Los ingredientes para cada tipo de pizza aparecen a
+continuación:
+1. Ingredientes vegetarianos: Pimiento y tofu.
+2. Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+Escriba un programa que pregunte al usuario si quiere una pizza ve-
+getariana o no, y en función de su respuesta le muestre un menú con
+los ingredientes disponibles para que elija. Solo se puede elegir un
+ingrediente además de la mozzarella y el tomate que están en todas las
+pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
+vegetariana o no y todos los ingredientes que lleva.
+#+begin_src python
+
+#+end_src
