@@ -23,14 +23,19 @@ print("El numero ingresado", "es" if str(n)[::-1] == str(n) else "no es", "capic
 Escriba un programa que muestre las siguientes opciones:
 1. Calcular el perímetro de un triángulo.
 2. Calcular el área de un triángulo.
-   Luego dependiendo de la opción elegida por el usuario calcule el área
-   o perímetro de un triángulo cuyos datos son también ingresados por el
-   usuario.
+Luego dependiendo de la opción elegida por el usuario calcule el área
+o perímetro de un triángulo cuyos datos son también ingresados por el
+usuario.
 #+begin_src python
-opcion = int(input("Ingrese 1 para calcular el perímetro, ingrese 2 para calcular el área:" ))
+opcion = int(input("Ingrese 1 para calcular el perímetro, ingrese 2 para calcular el área: "))
 if opcion == 1:
     perimetro = sum([int(input("Ingrese lado: ")) for i in range (3)])
     print("El perímetro es:", perimetro)
+else:
+    base = int(input("Ingrese la base: "))
+    altura = int(input("Ingrese la altura: "))
+    area = base * altura / 2
+    print("El área del triángulo es:", area)
 #+end_src
 
 * Ejercicio 4:
@@ -45,7 +50,18 @@ de segundo grado tiene:
 Nota: Todos los valores requeridos por la ecuación son ingresados por
 el usuario.
 #+begin_src python
+a = float(input("Ingrese el valor de a: "))
+b = float(input("Ingrese el valor de b: "))
+c = float(input("Ingrese el valor de c: "))
+disc = b * b - 4 * a * c
+if disc == 0:
+    mensaje = "tiene una"
+elif disc > 0:
+    mensaje = "tiene dos"
+else:
+    mensaje = "no tiene"
 
+print("La ecuación", mensaje, "solución/es real/es.")
 #+end_src
 
 * Ejercicio 5:
@@ -54,7 +70,22 @@ valores numéricos. Luego el programa le pregunta al usuario si quiere
 sumar, restar dividir o multiplicar y dependiendo de la opción elegida
 el programa realiza la operación correspondiente.
 #+begin_src python
+a = float(input("Ingrese el valor de a: "))
+b = float(input("Ingrese el valor de b: "))
+operacion = input("Ingrese la operación a realizar, utilice los símbolos + - * / : " )
+error = False
+if operacion == "+":
+    resultado = a + b
+elif operacion == "-":
+    resultado = a - b
+elif operacion == "*":
+    resultado = a * b
+elif operacion == "/" and b != 0:
+    resultado = a / b
+else:
+    error = True
 
+print("Operación no válida." if error else f"El resultado es: {resultado}")
 #+end_src
 
 * Ejercicio 6:
@@ -63,7 +94,16 @@ nombre de dos equipos y la cantidad de goles que han hecho en un
 partido. Luego el programa imprime el nombre del equipo ganador y
 bien el nombre de los dos equipos en caso de empate.
 #+begin_src python
-
+equipo1 = input("Ingrese el primer equipo y separado con una coma los goles: ").split(",")
+equipo2 = input("Ingrese el segundo equipo y separado con una coma los goles: ").split(",")
+goles1 = int(equipo1[1])
+goles2 = int(equipo2[1])
+if goles1 == goles2:
+    print(equipo1[0], equipo2[0])
+elif goles1 > goles2:
+    print(equipo1[0])
+else:
+    print(equipo2[0])
 #+end_src
 
 * Ejercicio 7:
