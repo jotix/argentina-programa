@@ -7,14 +7,16 @@ Escriba un programa que permita que el usuario ingrese un
 número el programa debe informar si el número ingresado es par o
 impar.
 #+begin_src python
-
+n = int(input("Ingrese un número entero: "))
+print("El número ingresado es", "impar." if n & 1 else "par.")
 #+end_src
 
 * Ejercicio 2:
 Escriba un programa que permita que el usuario ingrese un
 número n. El programa debe informar si el número es capicúa o no.
 #+begin_src python
-
+n = int(input("Ingrese un número entero: "))
+print("El numero ingresado", "es" if str(n)[::-1] == str(n) else "no es", "capicúa.")
 #+end_src
 
 * Ejercicio 3:
@@ -25,7 +27,10 @@ Escriba un programa que muestre las siguientes opciones:
    o perímetro de un triángulo cuyos datos son también ingresados por el
    usuario.
 #+begin_src python
-
+opcion = int(input("Ingrese 1 para calcular el perímetro, ingrese 2 para calcular el área:" ))
+if opcion == 1:
+    perimetro = sum([int(input("Ingrese lado: ")) for i in range (3)])
+    print("El perímetro es:", perimetro)
 #+end_src
 
 * Ejercicio 4:
