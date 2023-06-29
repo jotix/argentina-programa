@@ -111,14 +111,23 @@ Escriba un programa que pregunte al usuario su edad y muestre
 por pantalla si es mayor de edad o no. El programa también le debe
 solicitar al usuario la edad a partir de la cual se considera una persona
 mayor de edad.
-Ejercicio 8: Escriba un programa que:
+#+begin_src python
+mayoria = int(input("A partir de que edad (inclusive) se es mayor: "))
+edad = int(input("Ingrese su edad: "))
+print("Usted", "es" if edad >= mayoria else "no es", "mayor de edad.")
+#+end_src
+
+* Ejercicio 8:
+Escriba un programa que:
 1. Almacene una contraseña en una variable.
 2. Pregunte al usuario por la contraseña.
 3. Imprima por pantalla si la contraseña introducida por el usuario
    coincide con la guardada en la variable sin tener en cuenta
    mayúsculas y minúsculas.
 #+begin_src python
-
+password = "1234"
+ing_pass = input("Ingrese su contraseña: ")
+print("Las contraseñas", "\b" if password == ing_pass else "NO", "coinciden.")
 #+end_src
 
 * Ejercicio 9:
@@ -127,7 +136,9 @@ Para tributar un determinado impuesto se debe ser mayor de
 Escriba un programa que pregunte al usuario su edad y sus ingresos
 mensuales y muestre por pantalla si el usuario tiene que tributar o no.
 #+begin_src python
-
+edad = int(input("Ingrese su edad: "))
+ingresos = float(input("Cuanto son sus ingresos: "))
+print("Usted", "\b" if edad > 16 and ingresos > 1000 else "no", "tiene que tributar")
 #+end_src
 
 * Ejercicio 10:
