@@ -6,10 +6,14 @@
 
 operaciones = { "+" : (lambda a,b: a+b), "-" : (lambda a,b:a-b), "*" : (lambda a,b: a*b), "/" : (lambda a,b: a/b) }
 
-a = float(input("Ingrese el valor de a: "))
-b = float(input("Ingrese el valor de b: "))
+x = float(input("Ingrese el valor de a: "))
+y = float(input("Ingrese el valor de b: "))
 
-operacion = input("Operación a realizar (utilice + - * /): " )
+ingreso_flag = True
+while ingreso_flag:
+    operacion = input("Operación a realizar (utilice + - * /): " )
+    if operacion in operaciones.keys():
+        ingreso_flag = False
 
-print("Error" if operacion == 4 and b ==0 else f"Resultado {operaciones[operacion](a,b)}")
+print("Error" if operacion == "/" and y == 0 else f"Resultado {operaciones[operacion](x,y)}")
 
