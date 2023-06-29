@@ -10,17 +10,15 @@
 # Nota: Todos los valores requeridos por la ecuación son ingresados por
 # el usuario.
 
-a = float(input("Ingrese el valor de a: "))
-b = float(input("Ingrese el valor de b: "))
-c = float(input("Ingrese el valor de c: "))
+a = float(input("Ingrese el coeficiente a de la ecuación: "))
+b = float(input("Ingrese el coeficiente b de la ecuación: "))
+c = float(input("Ingrese el coeficiente c de la ecuación: "))
 
-disc = b * b - 4 * a * c
+discriminante = b**2 - 4*a*c
 
-if disc == 0:
-    mensaje = "tiene una"
-elif disc > 0:
-    mensaje = "tiene dos"
+if discriminante > 0:
+    print("La ecuación tiene dos soluciones reales distintas.")
+elif discriminante == 0:
+    print("La ecuación tiene una única solución real.")
 else:
-    mensaje = "no tiene"
-
-print("La ecuación", mensaje, "solución/es real/es.")
+    print("La ecuación no tiene solución real.")

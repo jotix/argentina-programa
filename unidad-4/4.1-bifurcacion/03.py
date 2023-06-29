@@ -6,7 +6,7 @@
 # o perímetro de un triángulo cuyos datos son también ingresados por el
 # usuario.
 
-opcion = int(input("Ingrese 1 para calcular el perímetro, ingrese 2 para calcular el área: "))
+opcion = int(input("1 - calcula el perímetro de un triángulo\n2 - calcular el área\nSeleccione un opción: "))
 
 if opcion == 1:
     perimetro = sum([int(input("Ingrese lado: ")) for i in range (3)])

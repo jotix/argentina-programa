@@ -4,21 +4,12 @@
 # sumar, restar dividir o multiplicar y dependiendo de la opción elegida
 # el programa realiza la operación correspondiente.
 
+operaciones = { "+" : (lambda a,b: a+b), "-" : (lambda a,b:a-b), "*" : (lambda a,b: a*b), "/" : (lambda a,b: a/b) }
+
 a = float(input("Ingrese el valor de a: "))
 b = float(input("Ingrese el valor de b: "))
-operacion = input("Ingrese la operación a realizar, utilice los símbolos + - * / : " )
 
-error = False
+operacion = input("Operación a realizar (utilice + - * /): " )
 
-if operacion == "+":
-    resultado = a + b
-elif operacion == "-":
-    resultado = a - b
-elif operacion == "*":
-    resultado = a * b
-elif operacion == "/" and b != 0:
-    resultado = a / b
-else:
-    error = True
+print("Error" if operacion == 4 and b ==0 else f"Resultado {operaciones[operacion](a,b)}")
 
-print("Operación no válida." if error else f"El resultado es: {resultado}")
