@@ -18,3 +18,19 @@ Escriba un programa que lea la puntuación del usuario e indique su
 nivel de rendimiento, así como la cantidad de dinero que recibirá el
 usuario.'''
 
+puntaje = float(input("Ingrese la puntuación del empleado: "))
+
+if puntaje == 0.0:
+    nivel = "Inaceptable"
+    bonus = 0
+elif puntaje == 0.4:
+    nivel = "Aceptable"
+    bonus 0 0.4
+else:
+    nivel = "Meritorio"
+    bonus = 0.6
+
+importe = 2400 * bonus
+print("Nivel de rendimiento", nivel)
+print("Dinero conseguido:", importe)
+

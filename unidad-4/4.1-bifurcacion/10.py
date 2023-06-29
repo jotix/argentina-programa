@@ -7,3 +7,11 @@ posterior a la N y el grupo B por el resto. Escriba un programa que
 pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo
 que le corresponde.'''
 
+nombre = input("Ingrese el nombre: ")
+sexo = input("Ingrese el sexo (m o f): ")
+if (sexo == "f" and nombre < "m") or (sexo == "m" and nombre > "n"):
+    grupo = "A"
+else:
+    grupo = "B"
+
+print("Usted está en el grupo", grupo)

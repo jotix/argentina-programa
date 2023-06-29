@@ -11,3 +11,22 @@ ingrediente además de la mozzarella y el tomate que están en todas las
 pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
 vegetariana o no y todos los ingredientes que lleva.'''
 
+import sys 
+
+# cre un diccionario con tres listas para los ingredientes
+menu = dict()
+menu["base"]  = [ "Mozzarella", "Tomate" ]
+menu["veg"]   = [ "Pimiento",   "Tofu" ]
+menu["noveg"] = [ "Peperoni",   "Jamón", "Salmón" ]
+
+eleccion = input("Quiere una pizza vegetariana? (s/n): ")
+tipo = "veg" if eleccion == "s" else "noveg"
+
+print( *[ f"{i+1} - {menu[tipo][i]}\n" for i in range(len(menu[tipo])) ] )
+
+ingrediente = int(input("Elija ingrediente: ")) - 1
+
+pizza = menu["base"]
+pizza.append(menu[tipo][ingrediente])
+
+print("Ingredientes:\n", *[f"- {i}\n" for i in pizza])
