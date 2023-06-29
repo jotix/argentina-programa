@@ -1,32 +1,30 @@
-'''Ejercicio 14:
-La pizzería Roma ofrece pizzas vegetarianas y no vegetarianas
-a sus clientes. Los ingredientes para cada tipo de pizza aparecen a
-continuación:
-1. Ingredientes vegetarianos: Pimiento y tofu.
-2. Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
-Escriba un programa que pregunte al usuario si quiere una pizza ve-
-getariana o no, y en función de su respuesta le muestre un menú con
-los ingredientes disponibles para que elija. Solo se puede elegir un
-ingrediente además de la mozzarella y el tomate que están en todas las
-pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
-vegetariana o no y todos los ingredientes que lleva.'''
+# Ejercicio 14:
+# La pizzería Roma ofrece pizzas vegetarianas y no vegetarianas
+# a sus clientes. Los ingredientes para cada tipo de pizza aparecen a
+# continuación:
+# 1. Ingredientes vegetarianos: Pimiento y tofu.
+# 2. Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
+# Escriba un programa que pregunte al usuario si quiere una pizza ve-
+# getariana o no, y en función de su respuesta le muestre un menú con
+# los ingredientes disponibles para que elija. Solo se puede elegir un
+# ingrediente además de la mozzarella y el tomate que están en todas las
+# pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
+# vegetariana o no y todos los ingredientes que lleva.
 
-import sys 
-
-# cre un diccionario con tres listas para los ingredientes
 menu = dict()
-menu["base"]  = [ "Mozzarella", "Tomate" ]
-menu["veg"]   = [ "Pimiento",   "Tofu" ]
-menu["noveg"] = [ "Peperoni",   "Jamón", "Salmón" ]
+menu["vegetariano"]    = [ "Pimiento",   "Tofu" ]
+menu["no vegetariano"] = [ "Peperoni",   "Jamón", "Salmón" ]
+ingredientes  = [ "Mozzarella", "Tomate" ]
 
-eleccion = input("Quiere una pizza vegetariana? (s/n): ")
-tipo = "veg" if eleccion == "s" else "noveg"
+tipos_de_menu = list(menu.keys())
+print(*[f"\n{i+1} - {tipos_de_menu[i]}" for i in range(len(tipos_de_menu)) ])
+indice_menu_elegido = int(input("Seleccione el tipo de menú: ")) - 1
 
-print( *[ f"{i+1} - {menu[tipo][i]}\n" for i in range(len(menu[tipo])) ] )
+menu_elegido = menu[tipos_de_menu[indice_menu_elegido]]
 
-ingrediente = int(input("Elija ingrediente: ")) - 1
+print( *[ f"\n{i+1} - {menu_elegido[i]}" for i in range(len(menu_elegido)) ] )
+indice_ingrediente = int(input("Elija ingrediente: ")) - 1
 
-pizza = menu["base"]
-pizza.append(menu[tipo][ingrediente])
+ingredientes.append(menu_elegido[indice_ingrediente])
 
-print("Ingredientes:\n", *[f"- {i}\n" for i in pizza])
+print("\nLista de ingredientes:\n", *[f"- {i}\n" for i in ingredientes])
