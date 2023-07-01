@@ -5,9 +5,12 @@
 
 lista_vocales = list("aeiou")
 lista_consonantes = list("qwrtypsdfghjklñzxcvbnm")
+
 string = input("Ingrese un string: ")
 lista_string = list(string)
 
-vocales = map(lambda c: c in lista_vocales, string)
-for char in lista_string:
-    if 
+vocales = list(filter(lambda char: char in lista_vocales, string))
+consonantes = list(filter(lambda char: char in lista_consonantes, string))
+
+print("Cantidad de vocales:", len(vocales))
+print("Cantidad de consonantes:", len(consonantes))
