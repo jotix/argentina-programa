@@ -267,7 +267,7 @@ menu["no vegetariano"] = [ "Peperoni",   "Jamón", "Salmón" ]
 ingredientes  = [ "Mozzarella", "Tomate" ]
 
 tipos_de_menu = list(menu.keys())
-print(*[f"\n{i+1} - {tipos_de_menu[i]}" for i in range(len(tipos_de_menu)) ])
+print(*[ f"\n{i+1} - {tipos_de_menu[i]}" for i in range(len(tipos_de_menu)) ] )
 indice_menu_elegido = int(input("Seleccione el tipo de menú: ")) - 1
 
 menu_elegido = menu[tipos_de_menu[indice_menu_elegido]]

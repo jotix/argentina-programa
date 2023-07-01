@@ -124,7 +124,18 @@ carácter de s0, primer carácter de s1, segundo carácter de s0, segundo
 carácter de s1 y así siguiendo. Finalmente, el programa imprime s0, s1
 y r.
 #+begin_src python
+s0 = input("Ingrese un string: ")
+s1 = input("Ingrese un string: ")
+r = ""
+for i in range(max([len(s0), len(s1)])):
+    if i < len(s0):
+        r += s0[i]
+    if i < len(s1):
+        r += s1[i]
 
+print("String s0: ", s0)
+print("String s1: ", s1)
+print("String r:  ", r)
 #+end_src
 
 * Ejercicio 11:
@@ -135,7 +146,26 @@ están en s y en la lista consonante todas las consonantes que están en
 s. Luego el programa debe imprimir por pantalla la cantidad de vocales
 y la cantidad de consonantes que tiene s.
 #+begin_src python
+todas_las_vocales = list("aeiou")
+todas_las_consonantes = list("qwrtypsdfghjklñzxcvbnm")
 
+vocales_ingresadas = []
+consonantes_ingresadas = []
+
+ingreso_flag = True
+while ingreso_flag:
+    s = input("Ingrese una letra (ingrese 0 para terminar): ")
+    if s == "0":
+        ingreso_flag = False    
+    elif s in todas_las_consonantes:
+        consonantes_ingresadas.append(s)
+    elif s in todas_las_vocales:
+        vocales_ingresadas.append(s)
+    else:    
+        print("Ese ingreso no cuenta, ingrese una LETRA!")
+
+print(f"Vocales ingresadas: {vocales_ingresadas} / Total {len(vocales_ingresadas)}")
+print(f"Consonantes ingresadas: {consonantes_ingresadas} / Total {len(consonantes_ingresadas)}")
 #+end_src
 
 * Ejercicio 12:
@@ -143,7 +173,17 @@ Escriba un programa que permita que el usuario ingrese por
 teclado una lista de strings. El programa retorna como resultado la
 misma lista pero con los strings invertidos.
 #+begin_src python
+lista = []
+ingreso_flag = True
+while ingreso_flag:
+    s = input("Ingrese un string (ingrese fin para terminar): ")
+    if s == "fin":
+        ingreso_flag = False
+    else:
+        lista.append(s)
 
+lista_resultado = list(map(lambda string: string[::-1], lista))
+print ("Lista resultado:", lista_resultado)
 #+end_src
 
 * Ejercicio 13:
