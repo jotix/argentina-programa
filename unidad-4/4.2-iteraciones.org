@@ -222,12 +222,22 @@ y strings que contiene la lista.
 lista = []
 ingreso_flag = True
 while ingreso_flag:
-    elem = input("Ingrese un número (ingrese fin para terminar): ")
-    if elem == "fin":
+    elem = input("Ingrese un número o una string (ingrese * para terminar): ")
+    if elem == "*":
         ingreso_flag = False
     else:
         lista.append(elem)
 
+numeros = []
+strings = []
+for i in range(len(lista)):
+    if lista[i].replace('.','',1).replace('-','',1).isdigit():
+        numeros.append(lista[i])
+    else:
+        strings.append(lista[i])
+
+print(f"Números ingresados:\n{numeros} / TOTAL: {len(numeros)}")
+print(f"Strings ingresadas:\n{strings} / TOTAL: {len(strings)}")
 #+end_src
 
 * Ejercicio 15:
@@ -239,7 +249,22 @@ es el precio. El programa debe permitir ingresar mercadería a la lista
 hasta que el usuario ingrese por teclado un *. Luego el programa debe
 imprimir por pantalla la lista de mercaderías ingresadas.
 #+begin_src python
+lista = []
+ingreso_flag = True
+while ingreso_flag:
+    art = input("Ingrese el nombre del artículo: (ingrese * para terminar): ")
+    if art == "*":
+        ingreso_flag = False
+    else:
+        precio = float(input("Ingrese el precio: "))
+        lista.append((art, precio))
 
+linea = "+--------------------+------------+"
+print(f"{linea}\n|     ARTÍCULO       |   PRECIO   |\n{linea}")
+for merc in lista:
+    print("| {:<18} | $ {:>8.2f} |".format(merc[0], merc[1]))
+
+print(linea)
 #+end_src
 
 * Ejercicio 16:
@@ -248,7 +273,22 @@ las materias y las notas que un alumno obtuvo durante un trimestre.
 Luego el programa debe calcular el promedio general del trimestre
 ingresado.
 #+begin_src python
+lista = []
+ingreso_flag = True
+while ingreso_flag:
+    materia = input("Ingrese la materia: (ingrese * para terminar): ")
+    if materia == "*":
+        ingreso_flag = False
+    else:
+        nota = float(input("Ingrese la nota: "))
+        lista.append((materia, nota))
 
+suma = 0
+for elem in lista:
+    suma += elem[1]
+
+promedio = suma / len(lista)
+print("El promedio del alumno es:", promedio)
 #+end_src
 
 * Ejercicio 17:

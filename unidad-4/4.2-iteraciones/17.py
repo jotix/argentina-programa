@@ -6,3 +6,4 @@
 # trimestre y el tercero para el tercer trimestre. Luego el programa debe
 # informar el promedio general del alumno.
 
+
