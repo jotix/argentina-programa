@@ -4,7 +4,6 @@
 # Luego el programa debe calcular el promedio general del trimestre
 # ingresado.
 
-
 lista = []
 ingreso_flag = True
 while ingreso_flag:
