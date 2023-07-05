@@ -8,6 +8,13 @@ número n. El programa debe imprimir los números pares comenzando
 desde 0 hasta n.
 #+begin_src python
 n = int(input("Ingrese un número entero: "))
+
+# versión lambda
+pares = list(filter(lambda i: not i & 1, range(n)))
+print("Números pares versión lambda:", *pares)
+
+# versión for loop
+print("\nNúmeros pares versión ciclo for:")
 for i in range(n):
     if not i & 1:
         print(i)
@@ -16,13 +23,44 @@ for i in range(n):
 * Ejercicio 2:
 Escriba un programa que imprima por pantalla la suma de los
 n primeros números naturales.
+
+** versión sin timers
 #+begin_src python
 n = int(input("Ingrese un número entero: "))
+
+# versión son función sum
+print(f"v1- Suma de los primeros {n} números naturales = {sum(range(n+1))}")
+
+# versión con ciclo for
 suma = 0
 for i in range(1,n+1):
     suma += i
 
-print(f"La suma de los primeros {n} números naturales es {suma}")
+print(f"v2- Suma de los primeros {n} números naturales = {suma}")
+#+end_src
+
+** versión con timers
+#+begin_src python
+import time
+
+n = int(input("Ingrese un número entero: "))
+
+# versión son función sum
+inicio_v1 = time.time()
+suma_v1 = sum(range(n+1))
+print(f"v1- Suma de los primeros {n} números naturales = {suma_v1}")
+fin_v1 = time.time()
+print("Tiempo de ejecución v1:", fin_v1 - inicio_v1, "segundos")
+
+# versión con ciclo for
+inicio_v2 = time.time()
+suma_v2 = 0
+for i in range(1,n+1):
+    suma_v2 += i
+
+print(f"v2- Suma de los primeros {n} números naturales = {suma_v2}")
+fin_v2 = time.time()
+print("Tiempo de ejecución v2:", fin_v2 - inicio_v2, "segundos")
 #+end_src
 
 * Ejercicio 3:
