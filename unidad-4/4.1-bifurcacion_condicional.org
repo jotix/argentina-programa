@@ -126,7 +126,7 @@ Escriba un programa que:
    mayúsculas y minúsculas.
 #+begin_src python
 password = "1234"
-ing_pass = input("Ingrese su contraseña: ")
+ing_pass = input("Ingrese su contraseña: ").lower()
 print("Las contraseñas", "\b" if password == ing_pass else "NO", "coinciden.")
 #+end_src
 
@@ -138,7 +138,7 @@ mensuales y muestre por pantalla si el usuario tiene que tributar o no.
 #+begin_src python
 edad = int(input("Ingrese su edad: "))
 ingresos = float(input("Cuanto son sus ingresos: "))
-print("Usted", "\b" if edad > 16 and ingresos > 1000 else "no", "tiene que tributar")
+print("Usted", "\b" if edad > 16 and ingresos >= 1000 else "no", "tiene que tributar")
 #+end_src
 
 * Ejercicio 10:
@@ -149,8 +149,9 @@ posterior a la N y el grupo B por el resto. Escriba un programa que
 pregunte al usuario su nombre y sexo, y muestre por pantalla el grupo
 que le corresponde.
 #+begin_src python
-nombre = input("Ingrese el nombre: ")
-sexo = input("Ingrese el sexo (m o f): ")
+nombre = input("Ingrese el nombre: ").lower()
+sexo = input("Ingrese el sexo (m o f): ").lower()
+
 if (sexo == "f" and nombre < "m") or (sexo == "m" and nombre > "n"):
     grupo = "A"
 else:
@@ -254,8 +255,8 @@ a sus clientes. Los ingredientes para cada tipo de pizza aparecen a
 continuación:
 1. Ingredientes vegetarianos: Pimiento y tofu.
 2. Ingredientes no vegetarianos: Peperoni, Jamón y Salmón.
-Escriba un programa que pregunte al usuario si quiere una pizza ve-
-getariana o no, y en función de su respuesta le muestre un menú con
+Escriba un programa que pregunte al usuario si quiere una pizza
+vegetariana o no, y en función de su respuesta le muestre un menú con
 los ingredientes disponibles para que elija. Solo se puede elegir un
 ingrediente además de la mozzarella y el tomate que están en todas las
 pizzas. Al final se debe mostrar por pantalla si la pizza elegida es
@@ -267,15 +268,21 @@ menu["no vegetariano"] = [ "Peperoni",   "Jamón", "Salmón" ]
 ingredientes  = [ "Mozzarella", "Tomate" ]
 
 tipos_de_menu = list(menu.keys())
-print(*[ f"\n{i+1} - {tipos_de_menu[i]}" for i in range(len(tipos_de_menu)) ] )
-indice_menu_elegido = int(input("Seleccione el tipo de menú: ")) - 1
 
+for i in range(len(tipos_de_menu)):
+    print(f"{i+1} - {tipos_de_menu[i]}")    
+
+indice_menu_elegido = int(input("Seleccione el tipo de menú: ")) - 1
 menu_elegido = menu[tipos_de_menu[indice_menu_elegido]]
 
-print( *[ f"\n{i+1} - {menu_elegido[i]}" for i in range(len(menu_elegido)) ] )
+for i in range (len(menu_elegido)):
+    print(f"{i+1} - {menu_elegido[i]}") 
+    
 indice_ingrediente = int(input("Elija ingrediente: ")) - 1
 
 ingredientes.append(menu_elegido[indice_ingrediente])
 
-print("\nLista de ingredientes:\n", *[f"- {i}\n" for i in ingredientes])
+print(f"\nLista de ingredientes - {tipos_de_menu[indice_menu_elegido]}:")
+for ing in ingredientes:
+    print(f"- {ing}")
 #+end_src
