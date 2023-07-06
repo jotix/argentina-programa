@@ -167,19 +167,33 @@ lista_consonantes = list("qwrtypsdfghjklñzxcvbnm")
 string = input("Ingrese un string: ")
 lista_string = list(string)
 
-vocales = list(filter(lambda char: char in lista_vocales, string))
-consonantes = list(filter(lambda char: char in lista_consonantes, string))
+cant_vocales = 0
+cant_consonantes = 0
+for char in string:
+    if char in lista_vocales:
+        cant_vocales += 1
+    elif char in lista_consonantes:
+        cant_consonantes += 1
 
-print("Cantidad de vocales:", len(vocales))
-print("Cantidad de consonantes:", len(consonantes))
+print("Cantidad de vocales:", cant_vocales)
+print("Cantidad de consonantes:", cant_consonantes)
 #+end_src
 
 * Ejercicio 8:
 Escriba un programa que permita comprobar si un string es un
 palíndromo. Para resolver este ejercicio no realice conversiones.
 #+begin_src python
-string = input("Ingrese un string: ")
-print("La string ingresada", "es" if string == string[::-1] else "no es", "un palíndromo")
+s = input("Ingrese un string: ").lower()
+ultimoIndice = len(s) - 1
+palindromo = True
+
+i = 0
+while palindromo != None and i <= ultimoIndice:
+    if s[i] != s[ultimoIndice - i]:
+        palindromo = False
+    i += 1
+        
+print("La palabra", "es" if palindromo else "no es", "un palíndromo")        
 #+end_src
 
 * Ejercicio 9:
@@ -188,14 +202,14 @@ strings. El programa debe imprimir por pantalla el string de mayor
 longitud.
 #+begin_src python
 n = int(input("Cuantos strings va a ingresar? "))
-lista = []
-longitudes = []
+
+mayor_long = ""
 for i in range(n):
     s = input("Ingrese un string: ")
-    lista.append(s)
-    longitudes.append(len(s))
+    if len(s) > len(mayor_long):
+        mayor_long = s
     
-print("EL string de mayor longitud es:", lista[longitudes.index(max(longitudes))])
+print(f"EL string de mayor longitud es: {mayor_long}")
 #+end_src
 
 * Ejercicio 10:
