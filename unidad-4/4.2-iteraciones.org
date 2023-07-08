@@ -1,6 +1,7 @@
 #+TITLE: Práctico Nro. 4.2: Iteraciones
 #+AUTHOR: Juan Jose Della Vecchia
 #+STARTUP: overview
+#+PROPERTY: headerargs+ :results output
 
 * Ejercicio 1:
 Escriba un programa que permita que el usuario ingrese un
@@ -420,14 +421,26 @@ promedio = suma / contador
 print("El promedio del alumno es:", promedio)
 #+end_src
 
+#+RESULTS:
+
 * Ejercicio 18:
 Cree un diccionario cuya clave sea un string y cuyo valor una
 lista de números. Luego realice las siguientes actividades:
 Imprima las claves.
 Imprima los valores.
-#+begin_src python
+#+begin_src python 
+dicc = {"uno" : 1,
+        "dos" : 2,
+        "tres" : 3,
+        "cuatro" : 4,
+        "cinco" : 5}
 
+print(f"Claves: {dicc.keys()}")
+print(f"Valores: {dicc.values()}")
 #+end_src
+
+#+RESULTS:
+: None
 
 * Ejercicio 19:
 Cree un diccionario cuya clave sea un número y cuyo valor
