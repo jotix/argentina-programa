@@ -11,7 +11,19 @@ Permita que el usuario ingrese una lista de números enteros.
 Imprima la suma de los números pares que se encuentran en la
 lista.
 #+begin_src python
+def sumaPar(l):
+    try:
+        return sum(filter(lambda n: not n & 1, l))
+    except Exception as err:
+        print(err)
+        return None
 
+lista = input("Ingrese una lista de numeros para sumar (separelos con comas): ").split(",")
+try:
+    lista_num = map(lambda s: int(s), lista)
+    print(f"Suma de los numeros pares ingresados {sumaPar(lista_num)}")
+except Exception as err:
+    print(err)
 #+end_src
 
 * Ejercicio 2:
@@ -32,7 +44,18 @@ Realice las siguientes actividades:
    b) Informe si la lista tiene mayoría de pares o mayoría de impares
       o tiene la misma cantidad de pares que impares.
 #+begin_src python
+def pares(l):
+    return list(filter(lambda i: not i & 1, l))
 
+def impares(l):
+    return list(filter(lambda i: i & 1, l))
+
+def mayoria(lp, li):
+    return "Mayoria par" if len(lp) > len(li) else ("Mayoria impar" if len(li) > len(lp) else "Igual cantidad de pares e impares")
+
+mensaje = "Ingrese una lista de numeros separados por comas: "
+lista = list(map(lambda s: int(s), input(mensaje).split(",")))
+print(mayoria(pares(lista), impares(lista)))
 #+end_src
 
 * Ejercicio 3:
