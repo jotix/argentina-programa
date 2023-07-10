@@ -6,7 +6,12 @@
 Construya un programa que permita que transforme un string
 a un número. Controle las situaciones de error usando excepciones.
 #+begin_src python
+s = input("Ingrese un string para convertirla a número: ")
 
+try:
+    print(f"El string convertido en numero es: {int(s)}")
+except Exception as err:
+    print(f"El string ingresado no se puede convertir a un número: {err}")
 #+end_src
 
 * Ejercicio 2:
@@ -14,7 +19,36 @@ Escriba un programa que permita insertar, modificar y eliminar
 elementos de una lista. Controle la situaciones de error usando
 excepciones.
 #+begin_src python
+lista = list(input("Ingrese una lista separando los elementos con comas: ").split(","))
 
+ingreso_flag = True
+while ingreso_flag:
+    print(*[f"\n{i+1} - {lista[i]}" for i in range(len(lista))])
+    opcion = input("Ingrese una opción I=Insertar, M=Modificar, E=Eliminar, F=Fin: ").lower()
+
+    try:
+        if opcion == "i":
+            elem = input("Ingrese nuevo elemento: ")
+            orden = int(input("En que posición lo inserta: "))
+            lista.insert(orden-1, elem)
+
+        elif opcion == "m":
+            orden = int(input("Que elemento quiere modificar: "))
+            elem = input("Ingrese nuevo valor: ")
+            lista[orden-1] = elem
+
+        elif opcion == "e":
+            orden = int(input("Que elemento quiere eliminar: "))
+            lista.remove(lista[orden-1])
+
+        elif opcion == "f":
+            ingreso_flag = False
+
+    except Exception as err:
+        print("Error: ", err)
+
+print("La lista final es:")
+print(*[f"\n{i+1} - {lista[i]}" for i in range(len(lista))])
 #+end_src
 
 * Ejercicio 3:
@@ -25,7 +59,18 @@ que no es numérico dispara una excepción ValueError la cual
 tiene un manejador que inserta el elemento que provocó la excepción
 en una lista de elementos no numéricos.
 #+begin_src python
+lista = list(input("Ingrese una lista separando los elementos con comas: ").split(","))
 
+lista_nonum = []
+suma = 0
+for elem in lista:
+    try:
+        suma += float(elem)
+    except ValueError:
+        lista_nonum.append(elem)
+
+print(f"La suma de los elementos numericos es: {suma}")
+print(f"Los elementos no númericos ingresados son: {lista_nonum}")
 #+end_src
 
 * Ejercicio 4:
