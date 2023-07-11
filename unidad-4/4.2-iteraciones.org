@@ -243,14 +243,14 @@ están en s y en la lista consonante todas las consonantes que están en
 s. Luego el programa debe imprimir por pantalla la cantidad de vocales
 y la cantidad de consonantes que tiene s.
 #+begin_src python
-todas_las_vocales = list("aeiou")
-todas_las_consonantes = list("qwrtypsdfghjklñzxcvbnm")
+todas_las_vocales = list("aeiouáéíóúü")
+todas_las_consonantes = list("qwrtypsdfghjklñzxcvbnmñ")
 
+l = input("Ingrese una lista de letras separadas por comas: ").split(",")
 vocales_ingresadas = []
 consonantes_ingresadas = []
 
-ingreso_flag = True
-while ingreso_flag:
+for letra in l:
     s = input("Ingrese una letra (ingrese 0 para terminar): ")
     if s == "0":
         ingreso_flag = False    
@@ -270,17 +270,12 @@ Escriba un programa que permita que el usuario ingrese por
 teclado una lista de strings. El programa retorna como resultado la
 misma lista pero con los strings invertidos.
 #+begin_src python
-lista = []
-ingreso_flag = True
-while ingreso_flag:
-    s = input("Ingrese un string (ingrese fin para terminar): ")
-    if s == "fin":
-        ingreso_flag = False
-    else:
-        lista.append(s)
+lista = input("Ingrese in lista de strings separadas por comas: ").split(",")
+lista_inv = []
+for s in lista:
+    lista_inv.append(s[::-1])
 
-lista_resultado = list(map(lambda string: string[::-1], lista))
-print ("Lista resultado:", lista_resultado)
+print ("Lista resultado:", lista_inv)
 #+end_src
 
 * Ejercicio 13:
@@ -289,18 +284,16 @@ lista l de números. El programa debe informar si la lista l contiene más
 números positivos que negativos o más números negativos que positivos
 o contiene la misma cantidad de números positivos que negativos.
 #+begin_src python
-lista = []
-ingreso_flag = True
-while ingreso_flag:
-    n = input("Ingrese un número (ingrese fin para terminar): ")
-    if n == "fin":
-        ingreso_flag = False
-    else:
-        lista.append(int(n))
+l = input("Ingrese una lista de numeros separados por coma: ").split(",")
 
-negativos = len(list(filter(lambda n: n < 0, lista)))
-positivos = len(list(filter(lambda n: n > 0, lista)))
-
+positivos = 0
+negativos = 0
+for n in l:
+    if int(n) > 0:
+        positivos += 1
+    elif int(n) < 0:
+        negativos += 1
+        
 if negativos == positivos:
     mensaje = "la misma cantidad de positivos y negativos"
 elif negativos > positivos:
@@ -316,25 +309,18 @@ Escriba un programa que permita que el usuario ingrese una
 lista de elementos. El programa debe informar la cantidad de números
 y strings que contiene la lista.
 #+begin_src python
-lista = []
-ingreso_flag = True
-while ingreso_flag:
-    elem = input("Ingrese un número o una string (ingrese * para terminar): ")
-    if elem == "*":
-        ingreso_flag = False
-    else:
-        lista.append(elem)
+lista = input("Ingrese una lista de elementos separados por comas: ").split(",")
 
-numeros = []
-strings = []
-for i in range(len(lista)):
-    if lista[i].replace('.','',1).replace('-','',1).isdigit():
-        numeros.append(lista[i])
+numeros = 0
+strings = 0
+for elemento in lista:
+    if elemento.isnumeric():
+        numeros += 1
     else:
-        strings.append(lista[i])
+        strings += 1
 
-print(f"Números ingresados:\n{numeros} / TOTAL: {len(numeros)}")
-print(f"Strings ingresadas:\n{strings} / TOTAL: {len(strings)}")
+print(f"Cantidad de números ingresados: {numeros}")
+print(f"Cantidad de strings ingresadas: {strings}")
 #+end_src
 
 * Ejercicio 15:
@@ -347,12 +333,10 @@ hasta que el usuario ingrese por teclado un *. Luego el programa debe
 imprimir por pantalla la lista de mercaderías ingresadas.
 #+begin_src python
 lista = []
-ingreso_flag = True
-while ingreso_flag:
+art = ""
+while art != "*":
     art = input("Ingrese el nombre del artículo: (ingrese * para terminar): ")
-    if art == "*":
-        ingreso_flag = False
-    else:
+    if art != "*":
         precio = float(input("Ingrese el precio: "))
         lista.append((art, precio))
 
@@ -371,12 +355,10 @@ Luego el programa debe calcular el promedio general del trimestre
 ingresado.
 #+begin_src python
 lista = []
-ingreso_flag = True
-while ingreso_flag:
+materia = ""
+while materia != "*":
     materia = input("Ingrese la materia: (ingrese * para terminar): ")
-    if materia == "*":
-        ingreso_flag = False
-    else:
+    if materia != "*":
         nota = float(input("Ingrese la nota: "))
         lista.append((materia, nota))
 
@@ -401,14 +383,12 @@ tri = ["primer", "segundo", "tercer"]
 for i in range(3):
     print(f"- Ingresando las notas para el {tri[i]} trimestre:")
     dicc[i+1] = []
-    ingreso_flag = True
-    while ingreso_flag:
-        s = input("Ingrese la materia: (ingrese * para terminar): ")
-        if s == "*":
-            ingreso_flag = False
-        else:
-            n = float(input("Ingrese la nota: "))
-            dicc[i+1].append((s, n))
+    materia = ""
+    while materia != "*":
+        materia = input("Ingrese la materia: (ingrese * para terminar): ")
+        if materia != "*":
+            nota = float(input("Ingrese la nota: "))
+            dicc[i+1].append((materia, nota))
 
 suma = 0
 contador = 0
@@ -420,8 +400,6 @@ for trimestre in dicc:
 promedio = suma / contador
 print("El promedio del alumno es:", promedio)
 #+end_src
-
-#+RESULTS:
 
 * Ejercicio 18:
 Cree un diccionario cuya clave sea un string y cuyo valor una
@@ -438,10 +416,6 @@ dicc = {"uno" : 1,
 print(f"Claves: {dicc.keys()}")
 print(f"Valores: {dicc.values()}")
 #+end_src
-
-#+RESULTS:
-: Claves: dict_keys(['uno', 'dos', 'tres', 'cuatro', 'cinco'])
-: Valores: dict_values([1, 2, 3, 4, 5])
 
 * Ejercicio 19:
 Cree un diccionario cuya clave sea un número y cuyo valor
@@ -477,24 +451,20 @@ cree una lista de personas las cuales son ingresadas por el usuario.
 Posteriormente pida al usuario un número de dni e imprima los datos
 correspondiente a la persona que tenga el dni ingresado por el usuario.
 #+begin_src python :tangle ej20.py
-lista = []
-lista_dnis = []
-ingreso_flag = True
-while ingreso_flag:
-    dni = int(input("Ingrese DNI (-1 para terminar): "))
-    if dni != -1:
+dicc = {}
+dni = 1
+while dni > 0:
+    dni = int(input("Ingrese DNI (cero o negativo para terminar): "))
+    if dni > 0:
         persona = dict()
-        persona["dni"] = dni
-        persona["nombre"] = input("Ingrese nombre: ")
-        persona["edad"] = int(input("Ingrese edad: "))
-        persona["domicilio"] = input("Ingrese domicilio: ")
+        dni = dni
+        nombre = input("Ingrese nombre: ")
+        edad = int(input("Ingrese edad: "))
+        domicilio = input("Ingrese domicilio: ")
         trabajos = tuple(input("Ingrese los trabajos (separelos con comas): ").split(","))
-        lista.append(persona)
-        lista_dnis.append(dni)
-    else:
-        ingreso_flag = False
+        dicc[dni] = {"nombre" : nombre, "edad" : edad, "domicilio" : domicilio, "trabajos" : trabajos}
 
 dni = int(input("Ingrese el dni de la persona a buscar: "))
 
-print(lista[lista_dnis.index(dni)] if dni in lista_dnis else f"el dni {dni} no está entre los datos ingresados.")
+print(dicc[dni] if dni in dicc.keys() else f"el dni {dni} no está entre los datos ingresados.")
 #+end_src
