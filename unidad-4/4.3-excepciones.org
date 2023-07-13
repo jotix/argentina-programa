@@ -74,8 +74,8 @@ print(f"Los elementos no númericos ingresados son: {lista_nonum}")
 #+end_src
 
 * Ejercicio 4:
-Escriba un programa que permita que el usuario cree un diccio-
-nario. El programa permite: insertar, eliminar y modificar los elementos
+Escriba un programa que permita que el usuario cree un diccionario.
+El programa permite: insertar, eliminar y modificar los elementos
 del diccionario. Cuando se desea insertar un valor cuya clave ya existe el
 programa dispara una excepción KeyError cuyo manejador pregunta al
 usario si realmente desea modificar el valor. En caso afirmativo realiza
@@ -84,7 +84,41 @@ ninguna acción. El programa también debe manejar los errores por
 intento de acceso al diccionarion y otros que puedan surgir utilizando
 una clave incorrecta.
 #+begin_src python
+clave = ""
+dicc = {}
+while clave != "fin":
+    clave = input("Ingrese la clave (fin para terminar): ")
+    if clave != "fin":
+        dicc[clave] = input(f"ingrese el valor de {clave}: ")
+        
+ingreso_flag = True
+while ingreso_flag:
+    print(*[f"\n{i} - {dicc[i]}" for i in dicc])
+    opcion = input("Ingrese una opción I=Insertar, M=Modificar, E=Eliminar, F=Fin: ").lower()
 
+    try:
+        if opcion == "i":
+            clave = input("Ingrese nueva clave: ")
+            valor = input("Ingrese el valor de {clave}: ")
+            dicc[clave] = valor
+
+        elif opcion == "m":
+            clave = int(input("Ingrese clave a modificar: "))
+            valor = input("Ingrese nuevo valor: ")
+            dicc[clave] = valor
+
+        elif opcion == "e":
+            orden = int(input("Que elemento quiere eliminar, ingrese la clave: "))
+            dicc.remove(orden)
+
+        elif opcion == "f":
+            ingreso_flag = False
+
+    except Exception as err:
+        print("Error: ", err)
+
+print("El diccionario final es:")
+print(*[f"\n{i} - {dicc[i]}" for i in dicc])
 #+end_src
 
 * Ejercicio 5:
